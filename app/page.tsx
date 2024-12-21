@@ -1,7 +1,20 @@
-import React from "react";
+"use client";
 
-const page = () => {
-  return <div className="w-10 h-10 bg-red-600">ただ</div>;
-};
+import { useState } from "react";
+import Quiz from "./feature/Components/Quiz";
 
-export default page;
+export default function Home() {
+  const [showQuiz, setShowQuiz] = useState(true);
+
+  const handleRestart = () => {
+    setShowQuiz(false);
+    setTimeout(() => setShowQuiz(true), 0); // 再レンダリングして初期化
+  };
+
+  return (
+    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <h1 className="text-3xl font-bold mb-4">クイズアプリ</h1>
+      {showQuiz ? <Quiz onRestart={handleRestart} /> : null}
+    </main>
+  );
+}
