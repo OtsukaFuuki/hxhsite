@@ -10,12 +10,12 @@ const quizData = [
   {
     id: 1,
     question: "ゴンの本名は？",
-    correctAnswer: "ゴン・フリークス",
+    correctAnswer: "ゴン＝フリークス",
   },
   {
     id: 2,
     question: "キルアの本名は？",
-    correctAnswer: "キルア・ゾルディック",
+    correctAnswer: "キルア＝ゾルディック",
   },
   {
     id: 3,
@@ -24,13 +24,14 @@ const quizData = [
   },
   {
     id: 4,
-    question: "ハンター試験で受験者に配られたバッジの総数は？",
-    correctAnswer: "400",
+    question:
+      "ゴンとキルアが参加したハンター試験で受験者に配られたバッジの総数は？",
+    correctAnswer: "404",
   },
   {
     id: 5,
-    question: "ネテロ会長が使う必殺技の名前は？",
-    correctAnswer: "百式観音",
+    question: "キルアの家族が住む屋敷のある山の名前は？",
+    correctAnswer: "ククルーマウンテン",
   },
   {
     id: 6,
@@ -54,8 +55,9 @@ const quizData = [
   },
   {
     id: 10,
-    question: "アルカが持つ特殊な能力の名前は？",
-    correctAnswer: "おねだり",
+    question:
+      "ゴンの父親であるジン＝フリークスが所属しているハンターのグループは？",
+    correctAnswer: "十二支ん",
   },
 ];
 
@@ -80,7 +82,7 @@ export default function Quiz({ onRestart }: QuizProps) {
   };
 
   return (
-    <div className="w-full max-w-md p-4 bg-white rounded shadow-md">
+    <div className="">
       {finished ? (
         <div className="text-center">
           <h2 className="text-2xl font-bold">クイズ終了！</h2>
