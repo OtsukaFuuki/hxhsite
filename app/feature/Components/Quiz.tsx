@@ -60,7 +60,6 @@ const quizData = [
     correctAnswer: "十二支ん",
   },
 ];
-
 export default function Quiz({ onRestart }: QuizProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -82,16 +81,16 @@ export default function Quiz({ onRestart }: QuizProps) {
   };
 
   return (
-    <div className="">
+    <div className="p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full bg-customHunter">
       {finished ? (
-        <div className="text-center">
+        <div className="text-center min-h-[228px] flex flex-col items-center justify-center border border-gray-300 rounded">
           <h2 className="text-2xl font-bold">クイズ終了！</h2>
           <p className="mt-2">
             あなたのスコア: {score}/{quizData.length}
           </p>
           <button
             onClick={onRestart}
-            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="mt-4 px-4 py-2 bg-customGreen text-white rounded hover:bg-customGreen-dark"
           >
             トップに戻る
           </button>

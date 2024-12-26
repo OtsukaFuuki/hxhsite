@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-customHunter {
+  /* background: linear-gradient(to bottom, #ff4500, #000000); */
+  /* background: linear-gradient(to bottom, #ff6347, #1a1a1a); */
+  background: linear-gradient(to bottom, #ff4500, #3b0d0c);
+}
