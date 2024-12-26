@@ -27,7 +27,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-6 space-y-6 sm:space-y-0 w-full">
           {/* メイン画像 */}
-          <div className="w-full max-w-[300px] ">
+          <div className="w-full max-w-[200px] sm:max-w-[300px]">
             <Image
               src="/images/main/main_img.webp"
               alt="メイン画像"
