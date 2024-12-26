@@ -8,7 +8,6 @@ type QuestionProps = {
 };
 
 import { useState } from "react";
-
 export default function Question({ quiz, onAnswer }: QuestionProps) {
   const [userAnswer, setUserAnswer] = useState("");
 
@@ -19,9 +18,13 @@ export default function Question({ quiz, onAnswer }: QuestionProps) {
   };
 
   return (
-    <div>
-      <h2 className="text-xl font-semibold mb-4">{quiz.question}</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+    <div className="p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full">
+      {/* 問題部分 */}
+      <h2 className="text-xl font-semibold mb-4 text-center min-h-[80px] flex items-center justify-center">
+        {quiz.question}
+      </h2>
+      {/* 回答フォーム */}
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           type="text"
           value={userAnswer}
