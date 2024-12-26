@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customGreen: "#2E8B57",
+        "customGreen-dark": "#276749", // ホバー時の色
+        customOrange: "#FF4500",
       },
     },
   },
