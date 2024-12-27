@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Quiz from "./feature/Components/Quiz";
+import AudioPlayerWithVolume from "./feature/Components/AudioPlayer";
 
 export default function Home() {
   const [showQuiz, setShowQuiz] = useState(true);
@@ -22,6 +23,7 @@ export default function Home() {
             width={100}
             height={100}
           />
+          <AudioPlayerWithVolume />
         </h1>
       </header>
       <div className="flex flex-col items-center justify-center">
