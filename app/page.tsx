@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <div className="sm:px-4 px-2 background-image2">
+    <div className="sm:px-4 px-2 background-image3">
       <header>
         <h1 className="text-2xl font-bold sm:mb-4 mb-0 sm:p-4 p-1 flex justify-start">
           <Image
