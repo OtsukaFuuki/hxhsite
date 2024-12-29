@@ -58,22 +58,24 @@ export default function Home() {
 
   return (
     <div className={`${backgroundClass} fsm:px-4 px-2`}>
-      <header className="flex items-start min-h-[52px] sm:mb-4 mb-0 sm:p-4 p-1">
+      <header className="flex items-center  sm:mb-4 mb-0 sm:p-4 p-1">
         <h1 className="text-2xl font-bold  ">
           <Image
             src="/images/header/logo1.png"
             alt="HxH ロゴ"
             width={100}
             height={100}
-            style={{ marginRight: "8px" }}
           />
         </h1>
-        <button onClick={() => location.reload()} className="mx-2 text-sm  ">
+        <button
+          onClick={() => location.reload()}
+          className="text-sm  text-white rounded"
+        >
           <Image
             src="/images/load/4.png"
             alt="HxH トップへ戻るボタン"
-            width={100}
-            height={100}
+            width={55}
+            height={55}
           />
         </button>
         <AudioPlayerWithVolume />
