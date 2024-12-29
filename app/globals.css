@@ -56,3 +56,18 @@
   width: 100%;
   height: 100vh;
 }
+
+/* 初級 */
+.bg-beginner {
+  background-color: #dfffd6;
+}
+
+/* 中級 */
+.bg-intermediate {
+  background-color: #ffe4c4;
+}
+
+/* 上級 */
+.bg-advanced {
+  background-color: #ffd6d6;
+}
