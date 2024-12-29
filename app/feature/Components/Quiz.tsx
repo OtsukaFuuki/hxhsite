@@ -58,8 +58,8 @@ export default function Quiz({ difficulty, onRestart }: QuizProps) {
     <div className="p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full bg-customHunter">
       {finished ? (
         <div className="text-center min-h-[228px] flex flex-col items-center justify-center border border-gray-300 rounded">
-          <h2 className="text-2xl font-bold">クイズ終了！</h2>
-          <p className="mt-2">
+          <h2 className="text-2xl font-bold text-white">クイズ終了！</h2>
+          <p className="mt-2 text-white">
             あなたのスコア: {score}/{questions.length}
           </p>
           <button
