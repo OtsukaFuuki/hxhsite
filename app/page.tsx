@@ -1,9 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { useState } from "react";
 import Image from "next/image";
 import Quiz from "./feature/Components/Quiz";
 import AudioPlayerWithVolume from "./feature/Components/AudioPlayer";
+import { useEffect } from "react";
 
 export default function Home() {
   const [showQuiz, setShowQuiz] = useState(true);
@@ -12,9 +14,25 @@ export default function Home() {
     setShowQuiz(false);
     setTimeout(() => setShowQuiz(true), 0); // 再レンダリングして初期化
   };
+  const backgroundClasses = [
+    // "background-image1",
+    "background-image2",
+    "background-image3",
+    "background-image4",
+    "background-image5",
+  ];
+
+  const [backgroundClass, setBackgroundClass] = useState("");
+
+  useEffect(() => {
+    // ランダムに背景クラスを選択
+    const randomClass =
+      backgroundClasses[Math.floor(Math.random() * backgroundClasses.length)];
+    setBackgroundClass(randomClass);
+  }, []);
 
   return (
-    <div className="sm:px-4 px-2 background-image2">
+    <div className={`${backgroundClass} fsm:px-4 px-2 `}>
       <header>
         <h1 className="text-2xl font-bold sm:mb-4 mb-0 sm:p-4 p-1 flex justify-start">
           <Image
