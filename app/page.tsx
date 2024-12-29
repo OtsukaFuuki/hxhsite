@@ -20,19 +20,30 @@ export default function Home() {
   };
   const seriesOptions = [
     "ハンター試験編",
-    "ククルーマウンテン編（キルアの実家）",
+    "ククルーマウンテン編",
     "天空闘技場編",
     "ヨークシンシティ編",
-    "グリードアイランド編",
+    "G・I編",
     "キメラアントNGL編",
     "キメラアント王誕生編",
+    "暗黒大陸編",
+    "全て",
   ];
 
   const backgroundClasses = [
     "background-image2",
-    "background-image3",
     "background-image4",
     "background-image5",
+    "background-image7",
+    "background-image8",
+    "background-image13",
+    "background-image14",
+    "background-image15",
+    "background-image29",
+    "background-image34",
+    "background-image36",
+    "background-image38",
+    "background-image39",
   ];
 
   useEffect(() => {
@@ -57,13 +68,15 @@ export default function Home() {
             style={{ marginRight: "8px" }}
           />
         </h1>
-        <AudioPlayerWithVolume />
-        <button
-          onClick={() => location.reload()}
-          className="ml-2 px-3 py-2 text-sm bg-customGreen text-white rounded hover:bg-customGreen-dark"
-        >
-          Topへ
+        <button onClick={() => location.reload()} className="mx-2 text-sm  ">
+          <Image
+            src="/images/load/4.png"
+            alt="HxH トップへ戻るボタン"
+            width={100}
+            height={100}
+          />
         </button>
+        <AudioPlayerWithVolume />
         <div className="ml-2">
           <Dropdown
             options={seriesOptions}
