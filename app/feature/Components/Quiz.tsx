@@ -1,79 +1,53 @@
-"use client";
 import { useState } from "react";
 import Question from "./Questioin";
 
 type QuizProps = {
+  difficulty: "beginner" | "intermediate" | "advanced";
   onRestart: () => void;
 };
 
-const quizData = [
-  {
-    id: 1,
-    question: "ゴンの本名は？",
-    correctAnswer: "ゴン＝フリークス",
-  },
-  {
-    id: 2,
-    question: "キルアの本名は？",
-    correctAnswer: "キルア＝ゾルディック",
-  },
-  {
-    id: 3,
-    question: "クラピカの一族の名前は？",
-    correctAnswer: "クルタ族",
-  },
-  {
-    id: 4,
-    question:
-      "ゴンとキルアが参加したハンター試験で受験者に配られたバッジの総数は？",
-    correctAnswer: "404",
-  },
-  {
-    id: 5,
-    question: "キルアの家族が住む屋敷のある山の名前は？",
-    correctAnswer: "ククルーマウンテン",
-  },
-  {
-    id: 6,
-    question: "幻影旅団の団長の名前は？",
-    correctAnswer: "クロロ・ルシルフル",
-  },
-  {
-    id: 7,
-    question: "レオリオの夢は何になること？",
-    correctAnswer: "医者",
-  },
-  {
-    id: 8,
-    question: "グリードアイランドのゲームマスターの名前は？",
-    correctAnswer: "ドゥーン",
-  },
-  {
-    id: 9,
-    question: "ジン・フリークスのハンターとしての主な専門は？",
-    correctAnswer: "遺跡ハンター",
-  },
-  {
-    id: 10,
-    question:
-      "ゴンの父親であるジン＝フリークスが所属しているハンターのグループは？",
-    correctAnswer: "十二支ん",
-  },
-];
-export default function Quiz({ onRestart }: QuizProps) {
+const quizData = {
+  beginner: [
+    { id: 1, question: "ゴンの本名は？", correctAnswer: "ゴン＝フリークス" },
+    {
+      id: 2,
+      question: "キルアの本名は？",
+      correctAnswer: "キルア＝ゾルディック",
+    },
+  ],
+  intermediate: [
+    { id: 3, question: "クラピカの一族の名前は？", correctAnswer: "クルタ族" },
+    { id: 4, question: "ハンター試験のバッジ総数は？", correctAnswer: "404" },
+  ],
+  advanced: [
+    {
+      id: 5,
+      question: "キルアの家の山の名前は？",
+      correctAnswer: "ククルーマウンテン",
+    },
+    {
+      id: 6,
+      question: "幻影旅団の団長は？",
+      correctAnswer: "クロロ・ルシルフル",
+    },
+  ],
+};
+
+export default function Quiz({ difficulty, onRestart }: QuizProps) {
+  const questions = quizData[difficulty]; // 難易度に応じた問題セットを取得
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
 
   const handleAnswer = (userAnswer: string) => {
-    const currentQuiz = quizData[currentIndex];
+    const currentQuiz = questions[currentIndex];
     if (
       userAnswer.trim().toLowerCase() ===
       currentQuiz.correctAnswer.toLowerCase()
     ) {
       setScore(score + 1);
     }
-    if (currentIndex + 1 < quizData.length) {
+    if (currentIndex + 1 < questions.length) {
       setCurrentIndex(currentIndex + 1);
     } else {
       setFinished(true);
@@ -86,7 +60,7 @@ export default function Quiz({ onRestart }: QuizProps) {
         <div className="text-center min-h-[228px] flex flex-col items-center justify-center border border-gray-300 rounded">
           <h2 className="text-2xl font-bold">クイズ終了！</h2>
           <p className="mt-2">
-            あなたのスコア: {score}/{quizData.length}
+            あなたのスコア: {score}/{questions.length}
           </p>
           <button
             onClick={onRestart}
@@ -96,7 +70,7 @@ export default function Quiz({ onRestart }: QuizProps) {
           </button>
         </div>
       ) : (
-        <Question quiz={quizData[currentIndex]} onAnswer={handleAnswer} />
+        <Question quiz={questions[currentIndex]} onAnswer={handleAnswer} />
       )}
     </div>
   );
