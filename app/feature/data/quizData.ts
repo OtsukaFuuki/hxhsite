@@ -90,41 +90,41 @@ export const quizData = {
       id: 7,
       question: "女王に忠実だった師団長コルトの人間の時(前世)の名前は？",
       correctAnswer: "クルト",
-      category: "キメラアント編",
+      category: "キメラアントNGL編",
     },
     {
       id: 8,
       question:
         "イカルゴの死体に寄生し、我が身のように操る能力といえば？カタカナで答えよ",
       correctAnswer: "リビングデッドドールズ",
-      category: "キメラアント編",
+      category: "キメラアント王誕生編",
     },
     {
       id: 9,
       question:
         "「軍儀」は何×何マスのボードゲームか？マスの総数を答えよ(数字のみ)",
       correctAnswer: "81",
-      category: "キメラアント編",
+      category: "キメラアント王誕生編",
     },
     {
       id: 10,
       question:
         "ポックルと共にNGLに入りキメラ＝アントに射殺・捕食された第287期ハンター試験受験者といえば？",
       correctAnswer: "ポンズ",
-      category: "キメラアント編",
+      category: "キメラアントNGL編",
     },
     {
       id: 11,
       question:
         "プフの自分の体を分裂させることで分身を創り出す能力といえば？カタカナで答えよ",
       correctAnswer: "ベルゼブブ",
-      category: "キメラアント編",
+      category: "キメラアント王誕生編",
     },
     {
       id: 12,
       question: "NGL自治国のNGLはそれぞれ何を意味しているか？",
       correctAnswer: "ネオグリーンライフ",
-      category: "キメラアント編",
+      category: "キメラアント王誕生編",
     },
   ],
   // 上級
@@ -177,7 +177,7 @@ export const quizData = {
       id: 20,
       question: "キルアは何系の念の能力者か？",
       correctAnswer: "変化系",
-      category: "全て",
+      category: "ハンター試験編",
     },
     {
       id: 22,
