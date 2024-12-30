@@ -1,15 +1,20 @@
 import { useState } from "react";
 
-import { quizData } from "../data/quizData";
 import { Question } from "./Questioin";
 
+// Quiz コンポーネントの型定義に category を保持
 type QuizProps = {
+  questions: {
+    id: number;
+    question: string;
+    correctAnswer: string;
+    category: string; // カテゴリ情報を保持
+  }[];
   difficulty: "easy" | "normal" | "hard";
   onRestart: () => void;
 };
-
-export const Quiz = ({ difficulty, onRestart }: QuizProps) => {
-  const questions = quizData[difficulty]; // 難易度に応じた問題セットを取得
+// Quiz コンポーネント内: 問題リスト表示のフィルタリング部分を修正
+export const Quiz = ({ questions, onRestart }: QuizProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
