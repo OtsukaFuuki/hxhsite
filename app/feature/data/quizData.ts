@@ -125,7 +125,7 @@ export const quizData = {
       id: 14,
       question: "キルアには友情的な感情がある、執事見習いの少女の名前は？",
       correctAnswer: "カナリア",
-      category: "ヨークシンシティ編",
+      category: "ハンター試験編",
     },
     // {
     //   id: 15,

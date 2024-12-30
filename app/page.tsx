@@ -20,6 +20,7 @@ const Home = () => {
     setCategory(value);
   };
   const seriesOptions = [
+    "全て",
     "ハンター試験編",
     "ククルーマウンテン編",
     "天空闘技場編",
@@ -28,7 +29,6 @@ const Home = () => {
     "キメラアントNGL編",
     "キメラアント王誕生編",
     "暗黒大陸編",
-    "全て",
   ];
 
   const backgroundClasses = [
