@@ -8,13 +8,14 @@ import AudioPlayerWithVolume from "./feature/Components/AudioPlayer";
 import DifficultySelector from "./feature/Components/DifficultySelector";
 import Dropdown from "./feature/Components/Dropdown";
 import { Quiz } from "./feature/Components/Quiz";
+import { quizData } from "./feature/data/quizData";
 
 const Home = () => {
   const [difficulty, setDifficulty] = useState<
     "easy" | "normal" | "hard" | null
   >(null);
   const [backgroundClass, setBackgroundClass] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("全て");
   const handleCategoryChange = (value: string) => {
     setCategory(value);
   };
@@ -52,9 +53,16 @@ const Home = () => {
     setBackgroundClass(randomClass);
   }, []);
 
-  const handleRestart = () => {
-    setDifficulty(null); // 難易度選択画面に戻る
-  };
+  // const handleRestart = () => {
+  //   setDifficulty(null); // 難易度選択画面に戻る
+  // };
+
+  // Home コンポーネント内の filteredQuestions にカテゴリフィルタリングを追加
+  const filteredQuestions = difficulty
+    ? quizData[difficulty].filter(
+        (question) => category === "全て" || question.category === category
+      )
+    : [];
 
   return (
     <div className={`${backgroundClass} fsm:px-4 px-2`}>
@@ -104,7 +112,11 @@ const Home = () => {
             {!difficulty ? (
               <DifficultySelector onSelectDifficulty={setDifficulty} />
             ) : (
-              <Quiz difficulty={difficulty} onRestart={handleRestart} />
+              <Quiz
+                questions={filteredQuestions}
+                difficulty={difficulty}
+                onRestart={() => setDifficulty(null)}
+              />
             )}
           </div>
         </div>
