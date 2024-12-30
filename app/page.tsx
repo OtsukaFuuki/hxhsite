@@ -3,20 +3,20 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Quiz from "./feature/Components/Quiz";
 
 import AudioPlayerWithVolume from "./feature/Components/AudioPlayer";
 import DifficultySelector from "./feature/Components/DifficultySelector";
 import Dropdown from "./feature/Components/Dropdown";
+import { Quiz } from "./feature/Components/Quiz";
 
-export default function Home() {
+const Home = () => {
   const [difficulty, setDifficulty] = useState<
-    "beginner" | "intermediate" | "advanced" | null
+    "easy" | "normal" | "hard" | null
   >(null);
   const [backgroundClass, setBackgroundClass] = useState("");
-  const [selectedDifficulty, setSelectedDifficulty] = useState("");
-  const handleDifficultyChange = (value: string) => {
-    setSelectedDifficulty(value);
+  const [category, setCategory] = useState("");
+  const handleCategoryChange = (value: string) => {
+    setCategory(value);
   };
   const seriesOptions = [
     "ハンター試験編",
@@ -82,8 +82,8 @@ export default function Home() {
         <div className="ml-2">
           <Dropdown
             options={seriesOptions}
-            selectedValue={selectedDifficulty}
-            onChange={handleDifficultyChange}
+            selectedValue={category}
+            onChange={handleCategoryChange}
           />
         </div>
       </header>
@@ -111,4 +111,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

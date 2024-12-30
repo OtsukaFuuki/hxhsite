@@ -1,7 +1,5 @@
 type DifficultySelectorProps = {
-  onSelectDifficulty: (
-    difficulty: "beginner" | "intermediate" | "advanced"
-  ) => void;
+  onSelectDifficulty: (difficulty: "easy" | "normal" | "hard") => void;
 };
 
 const DifficultySelector: React.FC<DifficultySelectorProps> = ({
@@ -11,19 +9,19 @@ const DifficultySelector: React.FC<DifficultySelectorProps> = ({
     <h1 className="text-xl font-bold text-white">難易度を選択してください</h1>
     <div className="flex flex-col w-full gap-5 mt-3">
       <button
-        onClick={() => onSelectDifficulty("beginner")}
+        onClick={() => onSelectDifficulty("easy")}
         className="px-4 py-2 bg-lime-500 text-white hover:bg-lime-600 shadow-lg"
       >
         初級
       </button>
       <button
-        onClick={() => onSelectDifficulty("intermediate")}
+        onClick={() => onSelectDifficulty("normal")}
         className="px-4 py-2 bg-amber-500 text-white hover:bg-amber-600 shadow-lg"
       >
         中級
       </button>
       <button
-        onClick={() => onSelectDifficulty("advanced")}
+        onClick={() => onSelectDifficulty("hard")}
         className="px-4 py-2 bg-rose-600 text-white hover:bg-rose-700 shadow-lg"
       >
         上級
