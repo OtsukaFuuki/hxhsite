@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </header>
       <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-6 space-y-6 sm:space-y-0 w-full">
+        <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-6  sm:space-y-0 w-full">
           {/* メイン画像 */}
           <div className="w-full max-w-[200px] sm:max-w-[300px]">
             <Image
