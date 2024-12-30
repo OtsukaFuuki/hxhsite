@@ -8,7 +8,8 @@ type QuestionProps = {
 };
 
 import { useState } from "react";
-export default function Question({ quiz, onAnswer }: QuestionProps) {
+
+export const Question = ({ quiz, onAnswer }: QuestionProps) => {
   const [userAnswer, setUserAnswer] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -41,4 +42,4 @@ export default function Question({ quiz, onAnswer }: QuestionProps) {
       </form>
     </div>
   );
-}
+};

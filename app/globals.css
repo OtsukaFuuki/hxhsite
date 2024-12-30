@@ -379,16 +379,16 @@
 }
 
 /* 初級 */
-.bg-beginner {
+.bg-easy {
   background-color: #dfffd6;
 }
 
 /* 中級 */
-.bg-intermediate {
+.bg-normal {
   background-color: #ffe4c4;
 }
 
 /* 上級 */
-.bg-advanced {
+.bg-hard {
   background-color: #ffd6d6;
 }
