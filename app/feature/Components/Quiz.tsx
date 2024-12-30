@@ -15,7 +15,6 @@ const quizData = {
       correctAnswer: "キルア＝ゾルディック",
     },
     { id: 3, question: "クラピカの一族の名前は？", correctAnswer: "クルタ族" },
-    { id: 4, question: "ハンター試験のバッジ総数は？", correctAnswer: "404" },
     {
       id: 5,
       question: "キルアの家の山の名前は？",
@@ -23,18 +22,18 @@ const quizData = {
     },
     {
       id: 6,
-      question: "幻影旅団の団長は？",
-      correctAnswer: "クロロ・ルシルフル",
+      question: "幻影旅団の団長のフルネームは？",
+      correctAnswer: "クロロ＝ルシルフル",
     },
     {
       id: 36,
-      question: "HUNTER×HUNTERの作者といえば？",
+      question: "HUNTER×HUNTERの作者といえば？(漢字で答えと)",
       correctAnswer: "冨樫義博",
     },
     {
       id: 37,
-      question: "ハンター試験は年に何回行われるか？",
-      correctAnswer: "1回",
+      question: "ハンター試験は年に何回行われるか？(数字のみ)",
+      correctAnswer: "1",
     },
     {
       id: 38,
@@ -136,8 +135,8 @@ const quizData = {
     },
     {
       id: 18,
-      question: "200階クラスの戦闘準備期間は何日か？",
-      correctAnswer: "90日",
+      question: "200階クラスの戦闘準備期間は何日か？(数字のみ)",
+      correctAnswer: "90",
     },
     {
       id: 19,
@@ -151,21 +150,16 @@ const quizData = {
       correctAnswer: "変化系",
     },
     {
-      id: 21,
-      question:
-        "ゴン,キルア,ズシがウイングから指導を受ける際にいつも何と返事するか？漢字(カタカナ)二文字で。",
-      correctAnswer: "押忍(オス)",
-    },
-    {
       id: 22,
-      question: "天空闘技場でゴンはヒソカに何対何で敗北したか？",
+      question:
+        "天空闘技場でゴンはヒソカに何対何で敗北したか？(数字対数字で答えよ)",
       correctAnswer: "11対4",
     },
-    {
-      id: 23,
-      question: "ゴンは父親のテープをどのタイミングで止めたか？",
-      correctAnswer: "ゴンの母親に関する情報",
-    },
+    // {
+    //   id: 23,
+    //   question: "ゴンは父親のテープをどのタイミングで止めたか？",
+    //   correctAnswer: "ゴンの母親に関する情報",
+    // },
     {
       id: 24,
       question: "十老頭の自慢の10人で構成されている実行部隊といえば？",
@@ -232,7 +226,7 @@ const quizData = {
       id: 35,
       question:
         "念能力をクロロに盗まれた陰獣のメンバーといえば？(平仮名で答えよ)",
-      correctAnswer: "梟(ふくろう)",
+      correctAnswer: "ふくろう",
     },
   ],
 };
