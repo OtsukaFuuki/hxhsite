@@ -41,7 +41,7 @@ export const Question = ({
         {quiz.question}
       </h2>
       {/* 画像部分 */}
-      <div className="mb-4 w-[291px] h-[170px] relative">
+      <div className="mb-4 m-w-[291px] h-[170px] relative">
         <Image
           src={quiz.image ? quiz.image : "/images/Quiz/noimg.png"} // 型エラー回避
           alt={quiz.question}
