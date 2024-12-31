@@ -88,11 +88,17 @@ const Home = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className={`ml-auto hamburger-icon ${
             isMenuOpen ? "open" : ""
-          } relative w-8 h-8 flex flex-col justify-between items-center`}
+          } relative flex flex-col justify-between items-center`}
         >
-          <span className="w-8 h-1 bg-white transform transition-transform"></span>
-          <span className="w-8 h-1 bg-white transform transition-transform"></span>
-          <span className="w-8 h-1 bg-white transform transition-transform"></span>
+          <div className="flex items-center">
+            <Image
+              src="/images/nav/1.png"
+              alt="navBarを案内するキルア"
+              width={70}
+              height={80}
+            />
+            <p className="text-xs text-white mb-5 font-semibold">クリック！</p>
+          </div>
         </button>
       </header>
       <HamburgerMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
