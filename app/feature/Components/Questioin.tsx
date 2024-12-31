@@ -3,15 +3,22 @@ type QuestionProps = {
     id: number;
     question: string;
     correctAnswer: string;
-    image?: string; // 画像のパスを追加
+    image?: string;
   };
+  currentIndex: number; // 現在の問題番号
+  totalQuestions: number; // 総問題数
   onAnswer: (userAnswer: string) => void;
 };
 
 import Image from "next/image";
 import { useState } from "react";
 
-export const Question = ({ quiz, onAnswer }: QuestionProps) => {
+export const Question = ({
+  quiz,
+  currentIndex,
+  totalQuestions,
+  onAnswer,
+}: QuestionProps) => {
   const [userAnswer, setUserAnswer] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -22,8 +29,15 @@ export const Question = ({ quiz, onAnswer }: QuestionProps) => {
 
   return (
     <div className="p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full">
+      {/* 現在の問題番号の表示 */}
+      <div className="text-right text-white mr-1">
+        <p>
+          {currentIndex}/{totalQuestions}
+        </p>
+      </div>
+
       {/* 問題部分 */}
-      <h2 className="text-white text-sm text-left font-semibold mb-4  min-h-[80px] flex items-center justify-center">
+      <h2 className="text-white text-sm text-left font-semibold mb-4  min-h-[60px] flex items-center justify-center">
         {quiz.question}
       </h2>
       {/* 画像部分 */}
