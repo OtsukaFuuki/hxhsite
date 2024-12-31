@@ -100,14 +100,14 @@ const Home = () => {
       {/* スタート画面 */}
       {!isQuizStarted ? (
         <div className="flex flex-col items-center justify-center mt-40">
-          <h2 className="text-3xl font-bold mb-6 text-white">
+          {/* <h2 className="text-3xl font-bold mb-6 text-white">
             クイズを始めましょう！
-          </h2>
+          </h2> */}
           <button
             onClick={() => setIsQuizStarted(true)} // クイズ開始
-            className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600"
+            className="bg-yellow-500 text-white w-32 h-32 rounded-full hover:bg-customGreen-dark flex items-center justify-center text-lg font-bold"
           >
-            スタート
+            Start
           </button>
         </div>
       ) : (
