@@ -1,39 +1,20 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-
-import DifficultySelector from "./feature/Components/DifficultySelector";
-import Dropdown from "./feature/Components/Dropdown";
+import HamburgerMenu from "./feature/Components/HamburgerMenu";
+import QuizControls from "./feature/Components/QuizControls";
 import { Quiz } from "./feature/Components/Quiz";
 import { quizData } from "./feature/data/quizData";
-import HamburgerMenu from "./feature/Components/HamburgerMenu";
 
 const Home = () => {
+  const [isQuizStarted, setIsQuizStarted] = useState(false); // クイズ開始状態
   const [difficulty, setDifficulty] = useState<
     "easy" | "normal" | "hard" | null
   >(null);
   const [backgroundClass, setBackgroundClass] = useState("");
   const [category, setCategory] = useState("全て");
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // メニューの開閉状態
-
-  const handleCategoryChange = (value: string) => {
-    setCategory(value);
-  };
-
-  const seriesOptions = [
-    "全て",
-    "ハンター試験編",
-    "ククルーマウンテン編",
-    "天空闘技場編",
-    "ヨークシンシティ編",
-    "G・I編",
-    "キメラアントNGL編",
-    "キメラアント王誕生編",
-    "会長選挙編",
-    "アルカ編",
-  ];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const backgroundClasses = [
     "background-image2",
@@ -47,15 +28,27 @@ const Home = () => {
     "background-image29",
     "background-image34",
     "background-image36",
-    "background-image38",
     "background-image39",
   ];
 
+  // スタート時の背景を設定
   useEffect(() => {
-    const randomClass =
-      backgroundClasses[Math.floor(Math.random() * backgroundClasses.length)];
-    setBackgroundClass(randomClass);
-  }, []);
+    if (isQuizStarted) {
+      changeBackground(); // クイズが始まったらランダム背景
+    } else {
+      setBackgroundClass("background-image0"); // スタート画面用の固定背景
+    }
+  }, [isQuizStarted]); // isQuizStarted の変更を監視
+
+  // 背景をランダムに変更する関数
+  const changeBackground = () => {
+    if (isQuizStarted) {
+      // クイズが開始されている場合のみ背景を変更
+      const randomClass =
+        backgroundClasses[Math.floor(Math.random() * backgroundClasses.length)];
+      setBackgroundClass(randomClass);
+    }
+  };
 
   const filteredQuestions = difficulty
     ? quizData[difficulty].filter(
@@ -65,36 +58,35 @@ const Home = () => {
 
   return (
     <div className={`${backgroundClass} fsm:px-4 px-2`}>
-      <header className="flex items-center justify-between sm:mb-4 mb-0 sm:p-4 p-1">
+      <header className="flex items-center sm:mb-4 mb-0 sm:p-4 p-1">
         <h1 className="text-2xl font-bold">
-          <Image
-            src="/images/header/logo1.png"
-            alt="HxH ロゴ"
-            width={100}
-            height={100}
-          />
+          <button onClick={() => location.reload()}>
+            <Image
+              src="/images/header/logo1.png"
+              alt="HxH ロゴ"
+              width={100}
+              height={100}
+            />
+          </button>
         </h1>
         <button
-          onClick={() => location.reload()}
-          className="text-sm text-white rounded"
+          onClick={changeBackground} // 背景をランダムに変更
+          disabled={!isQuizStarted} // 機能的には無効化
+          className="text-sm text-white rounded" // 見た目を維持
+          style={{
+            pointerEvents: isQuizStarted ? "auto" : "none", // クリックイベントを無効化
+          }}
         >
           <Image
             src="/images/load/4.png"
-            alt="HxH トップへ戻るボタン"
+            alt="背景を変更するボタン"
             width={55}
             height={55}
           />
         </button>
-        <div className="ml-2">
-          <Dropdown
-            options={seriesOptions}
-            selectedValue={category}
-            onChange={handleCategoryChange}
-          />
-        </div>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`ml-4 hamburger-icon ${
+          className={`ml-auto hamburger-icon ${
             isMenuOpen ? "open" : ""
           } relative w-8 h-8 flex flex-col justify-between items-center`}
         >
@@ -104,30 +96,38 @@ const Home = () => {
         </button>
       </header>
       <HamburgerMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-6 sm:space-y-0 w-full">
-          <div className="w-full max-w-[200px] sm:max-w-[300px]">
-            <Image
-              src="/images/main/main_img.webp"
-              alt="メイン画像"
-              layout="responsive"
-              width={600}
-              height={400}
-            />
-          </div>
-          <div className="w-full max-w-[300px] sm:max-w-[500px] bg-customHunter">
-            {!difficulty ? (
-              <DifficultySelector onSelectDifficulty={setDifficulty} />
-            ) : (
-              <Quiz
-                questions={filteredQuestions}
-                difficulty={difficulty}
-                onRestart={() => setDifficulty(null)}
-              />
-            )}
-          </div>
+
+      {/* スタート画面 */}
+      {!isQuizStarted ? (
+        <div className="flex flex-col items-center justify-center mt-40">
+          <h2 className="text-3xl font-bold mb-6 text-white">
+            クイズを始めましょう！
+          </h2>
+          <button
+            onClick={() => setIsQuizStarted(true)} // クイズ開始
+            className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600"
+          >
+            スタート
+          </button>
         </div>
-      </div>
+      ) : (
+        // 修正後のクイズ画面
+        <div className="flex flex-col items-center justify-center w-full mt-20">
+          {!difficulty ? (
+            <QuizControls
+              selectedCategory={category}
+              onSelectCategory={setCategory}
+              onSelectDifficulty={setDifficulty}
+            />
+          ) : (
+            <Quiz
+              questions={filteredQuestions}
+              difficulty={difficulty}
+              onRestart={() => setDifficulty(null)}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 };

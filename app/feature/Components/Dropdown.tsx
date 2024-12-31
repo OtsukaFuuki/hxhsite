@@ -20,7 +20,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       <select
         value={selectedValue}
         onChange={(e) => onChange(e.target.value)}
-        className="bg-gray-200 text-white border border-gray-300 rounded-md p-2 w-24  text-xs bg-gradient-to-r from-black via-indigo-700 to-purple-800 shadow-md hover:bg-indigo-800 focus:outline-none "
+        className="bg-gray-200 text-white border border-gray-300 rounded-md p-2 w-48  text-xs bg-gradient-to-r from-black via-indigo-700 to-purple-800 shadow-md hover:bg-indigo-800 focus:outline-none "
       >
         <option value="" disabled>
           出題範囲選択
