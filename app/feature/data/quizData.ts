@@ -27,21 +27,21 @@ export const quizData = {
       question: "キルアの家族が住む屋敷のある山の名前は？",
       correctAnswer: ["ククルーマウンテン"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/4.png",
+      image: "/images/Quiz/easy/3.png",
     },
     {
       id: 5,
       question: "幻影旅団の団長のフルネームは？",
       correctAnswer: ["クロロ＝ルシルフル"],
       category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/5.jpeg",
+      image: "/images/Quiz/easy/4.jpg",
     },
     {
       id: 6,
       question: "HUNTER×HUNTERの作者といえば？(漢字で答えよ)",
       correctAnswer: ["冨樫義博"],
       category: "全て",
-      image: "/images/Quiz/easy/6.jpg",
+      image: "/images/Quiz/easy/5.jpeg",
     },
     {
       id: 7,
@@ -55,6 +55,7 @@ export const quizData = {
         "ハンター協会の最高責任者でもある、審査委員会の第12代会長といえば？",
       correctAnswer: ["ネテロ"],
       category: "ハンター試験編",
+      image: "/images/Quiz/easy/6.jpg",
     },
     {
       id: 9,
