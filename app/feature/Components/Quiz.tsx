@@ -7,7 +7,7 @@ type QuizProps = {
   questions: {
     id: number;
     question: string;
-    correctAnswer: string;
+    correctAnswer: string[];
     category: string; // カテゴリ情報を保持
   }[];
   difficulty: "easy" | "normal" | "hard";
@@ -19,16 +19,19 @@ export const Quiz = ({ questions, onRestart }: QuizProps) => {
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
   const [answers, setAnswers] = useState<
-    { question: string; userAnswer: string; correctAnswer: string }[]
+    { question: string; userAnswer: string; correctAnswer: string[] }[]
   >([]);
 
   const handleAnswer = (userAnswer: string) => {
     const currentQuiz = questions[currentIndex];
 
     // 正解チェック
+    // 正解チェック
     if (
-      userAnswer.trim().toLowerCase() ===
-      currentQuiz.correctAnswer.toLowerCase()
+      currentQuiz.correctAnswer.some(
+        (answer) =>
+          userAnswer.trim().toLowerCase() === answer.trim().toLowerCase()
+      )
     ) {
       setScore(score + 1);
     }
@@ -76,7 +79,7 @@ export const Quiz = ({ questions, onRestart }: QuizProps) => {
                     <strong>あなたの回答 :</strong> {answer.userAnswer}
                   </div>
                   <div className="text-left">
-                    <strong>正解 :</strong> {answer.correctAnswer}
+                    <strong>正解 :</strong> {answer.correctAnswer.join(", ")}
                   </div>
                 </li>
               ))}
