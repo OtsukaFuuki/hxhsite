@@ -24,6 +24,11 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, onClose }) => {
         <div>
           <h2 className="text-lg font-bold mb-4">音楽設定</h2>
           <AudioPlayerSwitch />
+          <p className="text-xs mt-4">
+            ※通信環境により再生されない場合があるが
+            <br />
+            気長に待っててね！
+          </p>
           {/* 他の音楽関連コンテンツをここに追加 */}
         </div>
         <div className="mt-6">
