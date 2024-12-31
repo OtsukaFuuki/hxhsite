@@ -27,7 +27,7 @@ const QuizControls: React.FC<QuizControlsProps> = ({
   ];
 
   return (
-    <div className="flex flex-col items-center space-y-4 w-full max-w-md bg-customHunter p-4 rounded-lg">
+    <div className="flex flex-col items-center space-y-4 w-full max-w-md bg-customHunter p-4 rounded-lg ">
       <h2 className="text-xl font-bold text-white">設定を選択してください</h2>
       <Dropdown
         options={seriesOptions}

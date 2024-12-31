@@ -61,7 +61,7 @@ export const Quiz = ({ questions, onRestart }: QuizProps) => {
               あなたのスコア: {score}/{questions.length}
             </p>
           </div>
-          <div className="mt-1 w-full max-h-[200px] overflow-y-auto bg-gray-900 p-4 rounded border border-gray-700">
+          <div className="mt-1 w-full max-h-[380px] overflow-y-auto bg-gray-900 p-4 rounded border border-gray-700">
             <h3 className="text-lg font-semibold text-white">回答結果</h3>
             <ul className="mt-2 space-y-4">
               {answers.map((answer, index) => (
