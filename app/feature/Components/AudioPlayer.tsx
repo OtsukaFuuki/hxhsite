@@ -63,7 +63,7 @@ export default function AudioPlayerSwitch() {
     list1: ["1.mp3", "2.mp3", "3.mp3"],
     list2: ["4.mp3", "5.mp3"],
     list3: ["hunter1.mp3"],
-    list4: ["5.mp3"],
+    list4: ["6.mp3"],
   };
 
   // 曲リストを選択し再生を開始
