@@ -3,10 +3,12 @@ type QuestionProps = {
     id: number;
     question: string;
     correctAnswer: string;
+    image?: string; // 画像のパスを追加
   };
   onAnswer: (userAnswer: string) => void;
 };
 
+import Image from "next/image";
 import { useState } from "react";
 
 export const Question = ({ quiz, onAnswer }: QuestionProps) => {
@@ -24,6 +26,16 @@ export const Question = ({ quiz, onAnswer }: QuestionProps) => {
       <h2 className="text-white text-sm text-left font-semibold mb-4  min-h-[80px] flex items-center justify-center">
         {quiz.question}
       </h2>
+      {/* 画像部分 */}
+      <div className="mb-4">
+        <Image
+          src={quiz.image ? quiz.image : "/images/Quiz/noimg.png"} // 型エラー回避
+          alt={quiz.question}
+          width={500} // 必須：画像の幅
+          height={300} // 必須：画像の高さ
+          className="w-full h-auto rounded-md"
+        />
+      </div>
       {/* 回答フォーム */}
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
