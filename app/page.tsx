@@ -28,7 +28,9 @@ const Home = () => {
     "G・I編",
     "キメラアントNGL編",
     "キメラアント王誕生編",
-    "暗黒大陸編",
+    "会長選挙編",
+    "アルカ編",
+    // "暗黒大陸編",
   ];
 
   const backgroundClasses = [
@@ -52,10 +54,6 @@ const Home = () => {
       backgroundClasses[Math.floor(Math.random() * backgroundClasses.length)];
     setBackgroundClass(randomClass);
   }, []);
-
-  // const handleRestart = () => {
-  //   setDifficulty(null); // 難易度選択画面に戻る
-  // };
 
   // Home コンポーネント内の filteredQuestions にカテゴリフィルタリングを追加
   const filteredQuestions = difficulty
