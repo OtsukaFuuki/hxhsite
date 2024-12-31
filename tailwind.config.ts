@@ -16,6 +16,12 @@ export default {
         customOrange: "#FF4500",
       },
     },
+    keyframes: {
+      bounce: {
+        "0%, 100%": { transform: "translateY(0)" },
+        "50%": { transform: "translateY(-5px)" },
+      },
+    },
   },
   plugins: [],
 } satisfies Config;

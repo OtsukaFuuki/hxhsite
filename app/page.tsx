@@ -97,7 +97,9 @@ const Home = () => {
               width={70}
               height={80}
             />
-            <p className="text-xs text-white mb-5 font-semibold">クリック！</p>
+            <p className="text-xs text-white mb-5 font-semibold animate-bounce">
+              クリック！
+            </p>
           </div>
         </button>
       </header>
