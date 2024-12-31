@@ -41,13 +41,13 @@ export const Question = ({
         {quiz.question}
       </h2>
       {/* 画像部分 */}
-      <div className="mb-4">
+      <div className="mb-4 w-[291px] h-[170px] relative">
         <Image
           src={quiz.image ? quiz.image : "/images/Quiz/noimg.png"} // 型エラー回避
           alt={quiz.question}
-          width={500} // 必須：画像の幅
-          height={300} // 必須：画像の高さ
-          className="w-full h-auto rounded-md"
+          layout="fill" // 親要素にフィットさせる
+          objectFit="cover" // 画像が枠にフィットするように拡大・縮小
+          className="rounded-md"
         />
       </div>
       {/* 回答フォーム */}
