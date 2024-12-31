@@ -21,7 +21,7 @@ export const Question = ({ quiz, onAnswer }: QuestionProps) => {
   return (
     <div className="p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full">
       {/* 問題部分 */}
-      <h2 className="text-white text-sm font-semibold mb-4 text-center min-h-[80px] flex items-center justify-center">
+      <h2 className="text-white text-sm text-left font-semibold mb-4  min-h-[80px] flex items-center justify-center">
         {quiz.question}
       </h2>
       {/* 回答フォーム */}
