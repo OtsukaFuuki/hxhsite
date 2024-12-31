@@ -60,9 +60,10 @@ export default function AudioPlayerSwitch() {
 
   // 曲リストの定義
   const songLists = {
-    list1: ["music1.mp3", "hunter1.mp3", "hunter1.mp3"],
-    list2: ["hunter1.mp3", "hunter1.mp3", "hunter1.mp3"],
-    list3: ["music1.mp3", "hunter1.mp3", "hunter1.mp3"],
+    list1: ["1.mp3", "2.mp3", "3.mp3"],
+    list2: ["4.mp3", "5.mp3"],
+    list3: ["hunter1.mp3"],
+    list4: ["5.mp3"],
   };
 
   // 曲リストを選択し再生を開始
@@ -106,24 +107,30 @@ export default function AudioPlayerSwitch() {
   return (
     <div className="space-y-4">
       {/* リスト再生ボタン */}
-      <div className="flex space-x-4">
+      <div className="flex flex-col gap-2">
         <button
-          className="px-4 py-2 bg-blue-500 text-white rounded"
+          className="px-5 py-1 bg-blue-500 text-white rounded text-left"
           onClick={() => playList("list1")}
         >
-          List1
+          1(旅団3曲)
         </button>
         <button
-          className="px-4 py-2 bg-green-500 text-white rounded"
+          className="px-5 py-1 bg-green-500 text-white rounded text-left"
           onClick={() => playList("list2")}
         >
-          List2
+          2(ヒソカ2曲)
         </button>
         <button
-          className="px-4 py-2 bg-red-500 text-white rounded"
+          className="px-5 py-1 bg-red-500 text-white rounded text-left"
           onClick={() => playList("list3")}
         >
-          List2
+          3(エンドレス大地踏み締めて)
+        </button>
+        <button
+          className="px-5 py-1 bg-red-500 text-white rounded text-left"
+          onClick={() => playList("list4")}
+        >
+          4(ネテロvsメルエム)
         </button>
       </div>
 
