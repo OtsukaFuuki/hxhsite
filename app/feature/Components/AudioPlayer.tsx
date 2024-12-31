@@ -111,19 +111,19 @@ export default function AudioPlayerSwitch() {
           className="px-4 py-2 bg-blue-500 text-white rounded"
           onClick={() => playList("list1")}
         >
-          Play List 1
+          List1
         </button>
         <button
           className="px-4 py-2 bg-green-500 text-white rounded"
           onClick={() => playList("list2")}
         >
-          Play List 2
+          List2
         </button>
         <button
           className="px-4 py-2 bg-red-500 text-white rounded"
           onClick={() => playList("list3")}
         >
-          Play List 3
+          List2
         </button>
       </div>
 
