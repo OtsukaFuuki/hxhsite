@@ -30,7 +30,7 @@ export const Question = ({
   return (
     <div className="p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full">
       {/* 現在の問題番号の表示 */}
-      <div className="text-right text-white mr-1">
+      <div className="text-right text-white mr-1 mb-4">
         <p>
           {currentIndex}/{totalQuestions}
         </p>
