@@ -20,7 +20,7 @@ export const quizData = {
       question: "クラピカの一族の名前は？",
       correctAnswer: ["クルタ族"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/3.jpeg",
+      image: "/images/Quiz/easy/7.jpg",
     },
     {
       id: 4,
