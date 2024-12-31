@@ -13,7 +13,7 @@ type QuizProps = {
   difficulty: "easy" | "normal" | "hard";
   onRestart: () => void;
 };
-// Quiz コンポーネント内: 問題リスト表示のフィルタリング部分を修正
+
 export const Quiz = ({ questions, onRestart }: QuizProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -52,16 +52,16 @@ export const Quiz = ({ questions, onRestart }: QuizProps) => {
   };
 
   return (
-    <div className="p-2 border border-gray-300 rounded shadow-lg max-w-lg w-full bg-customHunter">
+    <div className="p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full bg-customHunter">
       {finished ? (
         <div className="text-center flex flex-col items-center justify-center">
           <div className="flex items-center">
             <h2 className="text-xl font-bold text-white">クイズ終了！</h2>
-            <p className="text-white text-xs">
+            <p className="text-white text-xs mt-2">
               あなたのスコア: {score}/{questions.length}
             </p>
           </div>
-          <div className="mt-1 w-full max-h-[380px] overflow-y-auto bg-gray-900 p-4 rounded border border-gray-700">
+          <div className="mt-3 w-full max-h-[380px] overflow-y-auto bg-gray-900 p-4 rounded border border-gray-700 ">
             <h3 className="text-lg font-semibold text-white">回答結果</h3>
             <ul className="mt-2 space-y-4">
               {answers.map((answer, index) => (
@@ -90,7 +90,12 @@ export const Quiz = ({ questions, onRestart }: QuizProps) => {
           </button>
         </div>
       ) : (
-        <Question quiz={questions[currentIndex]} onAnswer={handleAnswer} />
+        <Question
+          quiz={questions[currentIndex]}
+          currentIndex={currentIndex + 1} // +1 して表示
+          totalQuestions={questions.length}
+          onAnswer={handleAnswer}
+        />
       )}
     </div>
   );

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -59,7 +60,7 @@ const Home = () => {
   return (
     <div className={`${backgroundClass} fsm:px-4 px-2`}>
       <header className="flex items-center sm:mb-4 mb-0 sm:p-4 p-1">
-        <h1 className="text-2xl font-bold">
+        <h1 className="text-2xl font-bold pt-2">
           <button onClick={() => location.reload()}>
             <Image
               src="/images/header/logo1.png"
@@ -81,7 +82,7 @@ const Home = () => {
             src="/images/load/4.png"
             alt="背景を変更するボタン"
             width={55}
-            height={55}
+            height={40}
           />
         </button>
         <button
@@ -94,8 +95,8 @@ const Home = () => {
             <Image
               src="/images/nav/1.png"
               alt="navBarを案内するキルア"
-              width={70}
-              height={80}
+              width={60}
+              height={60}
             />
             <p className="text-xs text-white mb-5 font-semibold animate-bounce">
               クリック！
