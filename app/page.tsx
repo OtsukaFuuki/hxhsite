@@ -110,8 +110,8 @@ const Home = () => {
       {!isQuizStarted ? (
         <div className="flex flex-col items-center justify-center mt-40">
           {/* <h2 className="text-3xl font-bold mb-6 text-white">
-            クイズを始めましょう！
-          </h2> */}
+              クイズを始めましょう！
+            </h2> */}
           <button
             onClick={() => setIsQuizStarted(true)} // クイズ開始
             className="bg-yellow-500 text-white w-32 h-32 rounded-full hover:bg-customGreen-dark flex items-center justify-center text-lg font-bold"

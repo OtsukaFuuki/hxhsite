@@ -2,7 +2,7 @@ type QuestionProps = {
   quiz: {
     id: number;
     question: string;
-    correctAnswer: string;
+    correctAnswer: string[];
     image?: string;
   };
   currentIndex: number; // 現在の問題番号
