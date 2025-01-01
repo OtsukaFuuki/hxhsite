@@ -74,7 +74,7 @@ const Home = () => {
 
   return (
     <div className={`${backgroundClass} fsm:px-4 px-2`}>
-      <header className="flex items-center sm:mb-4 mb-2 sm:p-4 p-1">
+      <header className="flex items-center sm:mb-4 mb-2 sm:p-4 p-1 justify-between">
         <h1 className="text-2xl font-bold pt-2">
           <button onClick={() => location.reload()}>
             <Image
@@ -104,20 +104,27 @@ const Home = () => {
         {/* ポップアップを表示するボタン */}
         <button
           onClick={() => setIsPopupOpen(true)} // ボタンがクリックされたらポップアップを開く
-          className="ml-auto  text-white p-1 rounded"
-        ></button>
+          className=" text-white rounded"
+        >
+          <Image
+            src="/images/header/1.png"
+            alt="popupヒソカ"
+            width={45}
+            height={45}
+          />
+        </button>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`ml-auto hamburger-icon ${
+          className={`hamburger-icon ${
             isMenuOpen ? "open" : ""
           } relative flex flex-col justify-between items-center`}
         >
-          <div className="flex items-center">
+          <div className="flex items-center ml-2">
             <Image
               src="/images/nav/1.png"
               alt="navBarを案内するキルア"
-              width={60}
-              height={60}
+              width={70}
+              height={70}
             />
             <p className="text-xs text-white mb-5 font-semibold animate-bounce">
               クリック！
