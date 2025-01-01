@@ -435,4 +435,5 @@ input[type="range"]::-moz-range-thumb {
 
 .popup-no-margin {
   margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
