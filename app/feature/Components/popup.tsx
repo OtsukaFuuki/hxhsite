@@ -25,7 +25,7 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center z-50 px-2 h-screen transition-opacity duration-500 ${
+      className={`fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center z-50 px-2 h-screen transition-opacity duration-500 popup-no-margin  ${
         isOpen ? "opacity-100" : "opacity-0"
       }`}
     >
@@ -38,7 +38,7 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
       >
         <h2 className="text-2xl font-semibold mb-4">アプリの説明</h2>
         <div className="max-h-96 overflow-y-auto">
-          <p>
+          <p className="p-1">
             このアプリは、あなたの知識をテストするためのクイズアプリです。
             さまざまなカテゴリや難易度を選択して、チャレンジを開始してください！
             このアプリは、あなたの知識をテストするためのクイズアプリです。
@@ -58,12 +58,14 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
             {/* ここに長い説明 */}
           </p>
         </div>
-        <button
-          onClick={onClose}
-          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
-        >
-          閉じる
-        </button>
+        <div className="text-right">
+          <button
+            onClick={onClose}
+            className="mt-4 bg-customGreen text-white py-2 px-4 rounded"
+          >
+            閉じる
+          </button>
+        </div>
       </div>
     </div>
   );

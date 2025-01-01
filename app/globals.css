@@ -432,3 +432,7 @@ input[type="range"]::-moz-range-thumb {
   background-color: #2e8b57;
   border-radius: 50%;
 }
+
+.popup-no-margin {
+  margin-top: 0 !important;
+}
