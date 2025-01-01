@@ -1,55 +1,3 @@
-// import { useRef, useState } from "react";
-
-// export default function AudioPlayerSwitch() {
-//   const audioRef = useRef<HTMLAudioElement | null>(null);
-//   const [isPlaying, setIsPlaying] = useState(false);
-
-//   const togglePlay = () => {
-//     if (audioRef.current) {
-//       if (isPlaying) {
-//         audioRef.current.pause();
-//       } else {
-//         audioRef.current.play();
-//       }
-//       setIsPlaying(!isPlaying);
-//     }
-//   };
-
-//   return (
-//     <div className="flex items-center space-x-4">
-//       <div
-//         className={`w-20 h-10 flex items-center rounded-full p-1 cursor-pointer relative ${
-//           isPlaying ? "bg-customGreen " : "bg-gray-300"
-//         }`}
-//         onClick={togglePlay}
-//       >
-//         {/* ON / OFF Text */}
-//         <span
-//           className={`absolute left-2 text-white font-bold text-sm ${
-//             isPlaying ? "opacity-100" : "opacity-50"
-//           }`}
-//         >
-//           ON
-//         </span>
-//         <span
-//           className={`absolute right-2 text-white font-bold text-sm ${
-//             !isPlaying ? "opacity-100" : "opacity-50"
-//           }`}
-//         >
-//           OFF
-//         </span>
-//         {/* Toggle Button */}
-//         <div
-//           className={`bg-white w-8 h-8 rounded-full shadow-md transform duration-300 ${
-//             isPlaying ? "translate-x-10" : "translate-x-0"
-//           }`}
-//         />
-//       </div>
-//       <audio ref={audioRef} src="/sounds/hunter1.mp3" loop />
-//     </div>
-//   );
-// }
-
 import { useRef, useState } from "react";
 
 export default function AudioPlayerSwitch() {
@@ -57,6 +5,9 @@ export default function AudioPlayerSwitch() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentList, setCurrentList] = useState<string[]>([]); // 現在の曲リスト
   const [currentIndex, setCurrentIndex] = useState(0); // 現在の曲のインデックス
+  const [currentListName, setCurrentListName] = useState(""); // 現在のリスト名
+  const [volume, setVolume] = useState(1); // 音量設定（1 = 最大、0 = 最小）
+  const [isReady, setIsReady] = useState(false); // 再生準備が整ったかどうか
 
   // 曲リストの定義
   const songLists = {
@@ -70,11 +21,13 @@ export default function AudioPlayerSwitch() {
   const playList = (listKey: keyof typeof songLists) => {
     const selectedList = songLists[listKey];
     setCurrentList(selectedList);
+    setCurrentListName(listKey); // リスト名を保存
     setCurrentIndex(0); // 最初の曲に設定
 
     if (audioRef.current) {
       audioRef.current.src = `/sounds/${selectedList[0]}`; // 最初の曲を設定
       audioRef.current.play();
+      setIsReady(true); // 曲が再生される準備ができたことを示す
       setIsPlaying(true);
     }
   };
@@ -92,7 +45,7 @@ export default function AudioPlayerSwitch() {
     }
   };
 
-  // 再生・一時停止の切り替え
+  // 再生・停止の切り替え
   const togglePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -104,8 +57,23 @@ export default function AudioPlayerSwitch() {
     }
   };
 
+  // 音量変更
+  const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newVolume = parseFloat(event.target.value);
+    if (audioRef.current) {
+      audioRef.current.volume = newVolume;
+    }
+    setVolume(newVolume);
+  };
+
   return (
     <div className="space-y-4">
+      {/* 再生中のリスト名 */}
+      <div className="text-left text-sm font-semibold">
+        {currentListName
+          ? `再生中のリスト: ${currentListName}`
+          : "下記の再生リストを選択して下さい"}
+      </div>
       {/* リスト再生ボタン */}
       <div className="flex flex-col gap-2">
         <button
@@ -134,31 +102,41 @@ export default function AudioPlayerSwitch() {
         </button>
       </div>
 
-      {/* 再生/停止トグル */}
-      <div
-        className={`w-20 h-10 flex items-center rounded-full p-1 cursor-pointer relative ${
-          isPlaying ? "bg-customGreen " : "bg-gray-300"
-        }`}
-        onClick={togglePlay}
-      >
-        <span
-          className={`absolute left-2 text-white font-bold text-sm ${
-            isPlaying ? "opacity-100" : "opacity-50"
+      {/* 再生・停止ボタン */}
+      <div className="flex justify-center gap-4">
+        <button
+          className={`px-6 py-2 text-white rounded ${
+            isReady
+              ? "bg-customGreen hover:bg-customGreen-dark"
+              : "bg-gray-300 cursor-not-allowed"
           }`}
+          onClick={togglePlay}
+          disabled={!isReady}
         >
-          ON
-        </span>
-        <span
-          className={`absolute right-2 text-white font-bold text-sm ${
-            !isPlaying ? "opacity-100" : "opacity-50"
-          }`}
-        >
-          OFF
-        </span>
-        <div
-          className={`bg-white w-8 h-8 rounded-full shadow-md transform duration-300 ${
-            isPlaying ? "translate-x-10" : "translate-x-0"
-          }`}
+          {isPlaying ? "停止" : "再生"}
+        </button>
+      </div>
+
+      {/* 音量調整スライダー */}
+      <div className="flex items-center justify-center gap-2">
+        <label htmlFor="volume" className="text-sm text-white">
+          音量
+        </label>
+        <input
+          id="volume"
+          type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          value={volume}
+          onChange={handleVolumeChange}
+          className={`w-32 ${isReady ? "" : "bg-gray-200 cursor-not-allowed"}`}
+          disabled={!isReady}
+          style={{
+            background: `linear-gradient(to right, #4caf50 ${
+              volume * 100
+            }%, #ddd ${volume * 100}%)`,
+          }}
         />
       </div>
 
