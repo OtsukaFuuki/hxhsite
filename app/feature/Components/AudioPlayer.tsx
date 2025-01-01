@@ -140,6 +140,11 @@ export default function AudioPlayerSwitch() {
           }}
         />
       </div>
+      <p className="text-xs">
+        つまみで調整できないです⤴︎
+        <br />
+        音量ボタンで調整ください
+      </p>
 
       {/* オーディオ */}
       <audio
