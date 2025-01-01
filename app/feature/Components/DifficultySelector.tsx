@@ -26,6 +26,14 @@ const DifficultySelector: React.FC<DifficultySelectorProps> = ({
       >
         上級
       </button>
+      <button
+        disabled
+        onClick={() => onSelectDifficulty("hard")}
+        className="flex flex-col items-center justify-center px-4 py-2 bg-gradient-to-r from-red-900 via-purple-800 to-black text-white hover:from-black hover:via-purple-900 hover:to-red-900 shadow-lg"
+      >
+        <p>???級</p>
+        <p className="text-xs text-white">~ comming soon ~</p>
+      </button>
     </div>
   </div>
 );
