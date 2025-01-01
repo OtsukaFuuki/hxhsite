@@ -35,6 +35,7 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
             ? "scale-100 opacity-100 translate-y-0"
             : "scale-90 opacity-0 translate-y-10"
         }`}
+        style={{ top: "-5%" }} // コンテンツ部分のみ上に移動
       >
         <h2 className="text-2xl font-semibold mb-4">アプリの説明</h2>
         <div className="max-h-96 overflow-y-auto">
