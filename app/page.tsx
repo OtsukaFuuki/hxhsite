@@ -7,7 +7,6 @@ import HamburgerMenu from "./feature/Components/HamburgerMenu";
 import QuizControls from "./feature/Components/QuizControls";
 import { Quiz } from "./feature/Components/Quiz";
 import { quizData } from "./feature/data/quizData";
-
 const Home = () => {
   const [isQuizStarted, setIsQuizStarted] = useState(false); // クイズ開始状態
   const [difficulty, setDifficulty] = useState<
@@ -16,6 +15,7 @@ const Home = () => {
   const [backgroundClass, setBackgroundClass] = useState("");
   const [category, setCategory] = useState("全て");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [numberOfQuestions, setNumberOfQuestions] = useState("全て");
 
   const backgroundClasses = [
     "background-image2",
@@ -51,10 +51,18 @@ const Home = () => {
     }
   };
 
+  // 問題を絞り込む
   const filteredQuestions = difficulty
-    ? quizData[difficulty].filter(
-        (question) => category === "全て" || question.category === category
-      )
+    ? quizData[difficulty]
+        .filter(
+          (question) => category === "全て" || question.category === category
+        )
+        .slice(
+          0,
+          numberOfQuestions === "全て"
+            ? quizData[difficulty].length
+            : parseInt(numberOfQuestions)
+        )
     : [];
 
   return (
@@ -124,6 +132,8 @@ const Home = () => {
               selectedCategory={category}
               onSelectCategory={setCategory}
               onSelectDifficulty={setDifficulty}
+              numberOfQuestions={numberOfQuestions}
+              onNumberOfQuestions={setNumberOfQuestions}
             />
           ) : (
             <Quiz
