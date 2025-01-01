@@ -7,8 +7,10 @@ import HamburgerMenu from "./feature/Components/HamburgerMenu";
 import QuizControls from "./feature/Components/QuizControls";
 import { Quiz } from "./feature/Components/Quiz";
 import { quizData } from "./feature/data/quizData";
+import { shuffleArray } from "./feature/utils/arrayUtils";
+
 const Home = () => {
-  const [isQuizStarted, setIsQuizStarted] = useState(false); // クイズ開始状態
+  const [isQuizStarted, setIsQuizStarted] = useState(false);
   const [difficulty, setDifficulty] = useState<
     "easy" | "normal" | "hard" | null
   >(null);
@@ -16,6 +18,7 @@ const Home = () => {
   const [category, setCategory] = useState("全て");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [numberOfQuestions, setNumberOfQuestions] = useState("全て");
+  const [isShuffle, setIsShuffle] = useState(false); // 追加: シャッフル状態
 
   const backgroundClasses = [
     "background-image2",
@@ -32,19 +35,16 @@ const Home = () => {
     "background-image39",
   ];
 
-  // スタート時の背景を設定
   useEffect(() => {
     if (isQuizStarted) {
-      changeBackground(); // クイズが始まったらランダム背景
+      changeBackground();
     } else {
-      setBackgroundClass("background-image0"); // スタート画面用の固定背景
+      setBackgroundClass("background-image0");
     }
-  }, [isQuizStarted]); // isQuizStarted の変更を監視
+  }, [isQuizStarted]);
 
-  // 背景をランダムに変更する関数
   const changeBackground = () => {
     if (isQuizStarted) {
-      // クイズが開始されている場合のみ背景を変更
       const randomClass =
         backgroundClasses[Math.floor(Math.random() * backgroundClasses.length)];
       setBackgroundClass(randomClass);
@@ -65,6 +65,11 @@ const Home = () => {
         )
     : [];
 
+  // シャッフル適用
+  const displayedQuestions = isShuffle
+    ? shuffleArray(filteredQuestions)
+    : filteredQuestions;
+
   return (
     <div className={`${backgroundClass} fsm:px-4 px-2`}>
       <header className="flex items-center sm:mb-4 mb-0 sm:p-4 p-1">
@@ -79,11 +84,11 @@ const Home = () => {
           </button>
         </h1>
         <button
-          onClick={changeBackground} // 背景をランダムに変更
-          disabled={!isQuizStarted} // 機能的には無効化
-          className="text-sm text-white rounded" // 見た目を維持
+          onClick={changeBackground}
+          disabled={!isQuizStarted}
+          className="text-sm text-white rounded"
           style={{
-            pointerEvents: isQuizStarted ? "auto" : "none", // クリックイベントを無効化
+            pointerEvents: isQuizStarted ? "auto" : "none",
           }}
         >
           <Image
@@ -114,18 +119,16 @@ const Home = () => {
       </header>
       <HamburgerMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
-      {/* スタート画面 */}
       {!isQuizStarted ? (
         <div className="flex flex-col items-center justify-center mt-40">
           <button
-            onClick={() => setIsQuizStarted(true)} // クイズ開始
+            onClick={() => setIsQuizStarted(true)}
             className="bg-yellow-500 text-white w-32 h-32 rounded-full hover:bg-customGreen-dark flex items-center justify-center text-lg font-bold"
           >
             Start
           </button>
         </div>
       ) : (
-        // 修正後のクイズ画面
         <div className="flex flex-col items-center justify-center w-full">
           {!difficulty ? (
             <QuizControls
@@ -134,10 +137,12 @@ const Home = () => {
               onSelectDifficulty={setDifficulty}
               numberOfQuestions={numberOfQuestions}
               onNumberOfQuestions={setNumberOfQuestions}
+              isShuffle={isShuffle} // シャッフル状態を渡す
+              setIsShuffle={setIsShuffle} // 状態更新関数を渡す
             />
           ) : (
             <Quiz
-              questions={filteredQuestions}
+              questions={displayedQuestions} // 表示する質問にシャッフル適用
               difficulty={difficulty}
               onRestart={() => setDifficulty(null)}
               setIsQuizStarted={setIsQuizStarted}
