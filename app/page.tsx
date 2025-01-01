@@ -8,6 +8,7 @@ import QuizControls from "./feature/Components/QuizControls";
 import { Quiz } from "./feature/Components/Quiz";
 import { quizData } from "./feature/data/quizData";
 import { shuffleArray } from "./feature/utils/arrayUtils";
+import Popup from "./feature/Components/popup";
 
 const Home = () => {
   const [isQuizStarted, setIsQuizStarted] = useState(false);
@@ -19,6 +20,7 @@ const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [numberOfQuestions, setNumberOfQuestions] = useState("全て");
   const [isShuffle, setIsShuffle] = useState(false); // 追加: シャッフル状態
+  const [isPopupOpen, setIsPopupOpen] = useState(false); // ポップアップの表示状態
 
   const backgroundClasses = [
     "background-image2",
@@ -98,6 +100,12 @@ const Home = () => {
             height={40}
           />
         </button>
+
+        {/* ポップアップを表示するボタン */}
+        <button
+          onClick={() => setIsPopupOpen(true)} // ボタンがクリックされたらポップアップを開く
+          className="ml-auto  text-white p-1 rounded"
+        ></button>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className={`ml-auto hamburger-icon ${
@@ -150,6 +158,8 @@ const Home = () => {
           )}
         </div>
       )}
+      {/* ポップアップ表示 */}
+      <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </div>
   );
 };
