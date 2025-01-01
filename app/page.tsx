@@ -126,7 +126,7 @@ const Home = () => {
         </div>
       ) : (
         // 修正後のクイズ画面
-        <div className="flex flex-col items-center justify-center w-full mt-20">
+        <div className="flex flex-col items-center justify-center w-full">
           {!difficulty ? (
             <QuizControls
               selectedCategory={category}

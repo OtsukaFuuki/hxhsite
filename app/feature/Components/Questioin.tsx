@@ -54,11 +54,11 @@ export const Question = ({
         </p>
       </div>
 
-      <h2 className="text-white text-sm text-left font-semibold mb-4 min-h-[80px] flex items-center justify-center">
+      <h2 className="text-white text-sm text-left font-semibold mb-4 min-h-[70px] flex items-center">
         {quiz.question}
       </h2>
 
-      <div className="mb-4 m-w-[291px] h-[170px] relative">
+      <div className="mb-4 m-w-[291px] h-[250px] relative">
         <Image
           src={quiz.image ? quiz.image : "/images/Quiz/noimg.png"}
           alt={quiz.question}

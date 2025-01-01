@@ -77,7 +77,7 @@ export const Quiz = ({ questions, onRestart }: QuizProps) => {
   };
 
   return (
-    <div className="p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full bg-customHunter">
+    <div className="px-2 py-3 border border-gray-300 rounded shadow-lg max-w-lg w-full bg-customHunter">
       {finished ? (
         <div className="text-center flex flex-col items-center justify-center">
           <div className="flex items-center">
@@ -86,7 +86,7 @@ export const Quiz = ({ questions, onRestart }: QuizProps) => {
               あなたのスコア: {score}/{questions.length}
             </p>
           </div>
-          <div className="mt-3 w-full max-h-[380px] overflow-y-auto bg-gray-900 p-4 rounded border border-gray-700 ">
+          <div className="mt-3 w-full max-h-[450px] overflow-y-auto bg-gray-900 p-4 rounded border border-gray-700 ">
             <h3 className="text-lg font-semibold text-white">回答結果</h3>
             <ul className="mt-2 space-y-4">
               {answers.map((answer, index) => (

@@ -5,22 +5,21 @@ type HamburgerMenuProps = {
   isOpen: boolean;
   onClose: () => void;
 };
-
 const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, onClose }) => {
   return (
     <div
-      className={`fixed z-50 top-0 right-0 h-full bg-gray-800 text-white transform ${
+      className={`fixed z-50 top-0 right-0 h-screen bg-gray-800 text-white transform ${
         isOpen ? "translate-x-0" : "translate-x-full"
       } transition-transform duration-300 ease-in-out`}
       style={{ width: "85%" }}
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 text-white text-2xl"
+        className="w-10 h-10 absolute top-2 right-4 text-white text-2xl"
       >
         ✕
       </button>
-      <div className="p-6">
+      <div className="p-6 overflow-y-auto h-full">
         <div>
           <h2 className="text-lg font-bold mb-4">音楽設定</h2>
           <AudioPlayerSwitch />
