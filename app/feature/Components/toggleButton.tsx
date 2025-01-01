@@ -10,8 +10,8 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
   setIsShuffle,
 }) => {
   return (
-    <div className="flex flex-col items-center mt-4">
-      <label htmlFor="toggle" className="text-white text-base mb-1">
+    <div className="flex flex-col items-center">
+      <label htmlFor="toggle" className="text-white text-xs font-semibold mb-2">
         シャッフル
       </label>
       <div

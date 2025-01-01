@@ -17,8 +17,8 @@ const Dropdown: React.FC<DropdownProps> = ({
   text,
 }) => {
   return (
-    <div className="flex flex-col items-center">
-      <label className="text-white text-lg">{label}</label>
+    <div className="flex flex-col items-start">
+      <label className="text-white text-sm font-semibold mb-2">{label}</label>
       <select
         value={selectedValue}
         onChange={(e) => onChange(e.target.value)}
