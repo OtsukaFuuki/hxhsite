@@ -1,6 +1,7 @@
 import React from "react";
 import Dropdown from "./Dropdown";
 import DifficultySelector from "./DifficultySelector";
+import ToggleButton from "./toggleButton";
 
 type QuizControlsProps = {
   selectedCategory: string;
@@ -8,6 +9,8 @@ type QuizControlsProps = {
   onSelectDifficulty: (value: "easy" | "normal" | "hard") => void;
   numberOfQuestions: string;
   onNumberOfQuestions: (value: string) => void;
+  isShuffle: boolean; // 追加: シャッフルの状態
+  setIsShuffle: React.Dispatch<React.SetStateAction<boolean>>; // 追加: シャッフルの切り替え
 };
 
 const QuizControls: React.FC<QuizControlsProps> = ({
@@ -16,6 +19,8 @@ const QuizControls: React.FC<QuizControlsProps> = ({
   onSelectDifficulty,
   onNumberOfQuestions,
   numberOfQuestions,
+  isShuffle, // 追加
+  setIsShuffle, // 追加
 }) => {
   const seriesOptions = [
     "全て",
@@ -35,21 +40,24 @@ const QuizControls: React.FC<QuizControlsProps> = ({
   return (
     <div className="flex flex-col items-center space-y-4 w-full max-w-md bg-customHunter p-4 rounded-lg ">
       <h2 className="text-xl font-bold text-white">設定を選択してください</h2>
-      <Dropdown
-        options={seriesOptions}
-        selectedValue={selectedCategory}
-        onChange={onSelectCategory}
-        text="出題範囲選択"
-        label="出題範囲"
-      />
-      <Dropdown
-        options={NumberOfQuestions}
-        selectedValue={numberOfQuestions}
-        onChange={onNumberOfQuestions}
-        text="問題数の設定"
-        label="問題数"
-      />
-
+      <div className="flex flex-col items-center ">
+        <Dropdown
+          options={seriesOptions}
+          selectedValue={selectedCategory}
+          onChange={onSelectCategory}
+          text="出題範囲選択"
+          label="出題範囲"
+        />
+        <Dropdown
+          options={NumberOfQuestions}
+          selectedValue={numberOfQuestions}
+          onChange={onNumberOfQuestions}
+          text="問題数の設定"
+          label="問題数"
+        />
+        {/* トグルボタン */}
+        <ToggleButton isShuffle={isShuffle} setIsShuffle={setIsShuffle} />
+      </div>
       <DifficultySelector onSelectDifficulty={onSelectDifficulty} />
     </div>
   );
