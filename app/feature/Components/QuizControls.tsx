@@ -40,23 +40,29 @@ const QuizControls: React.FC<QuizControlsProps> = ({
   return (
     <div className="flex flex-col items-center space-y-4 w-full max-w-md bg-customHunter p-4 rounded-lg ">
       <h2 className="text-xl font-bold text-white">設定を選択してください</h2>
-      <div className="flex flex-col items-center ">
-        <Dropdown
-          options={seriesOptions}
-          selectedValue={selectedCategory}
-          onChange={onSelectCategory}
-          text="出題範囲選択"
-          label="出題範囲"
-        />
-        <Dropdown
-          options={NumberOfQuestions}
-          selectedValue={numberOfQuestions}
-          onChange={onNumberOfQuestions}
-          text="問題数の設定"
-          label="問題数"
-        />
-        {/* トグルボタン */}
-        <ToggleButton isShuffle={isShuffle} setIsShuffle={setIsShuffle} />
+      <div className="bg-customHunter p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full">
+        <div className="flex  items-end">
+          <div className="flex flex-col  gap-5 items-start">
+            <Dropdown
+              options={seriesOptions}
+              selectedValue={selectedCategory}
+              onChange={onSelectCategory}
+              text="出題範囲選択"
+              label="出題範囲"
+            />
+            <Dropdown
+              options={NumberOfQuestions}
+              selectedValue={numberOfQuestions}
+              onChange={onNumberOfQuestions}
+              text="問題数の設定"
+              label="問題数"
+            />
+          </div>
+          <div className="ml-auto">
+            {/* トグルボタン */}
+            <ToggleButton isShuffle={isShuffle} setIsShuffle={setIsShuffle} />
+          </div>
+        </div>
       </div>
       <DifficultySelector onSelectDifficulty={onSelectDifficulty} />
     </div>

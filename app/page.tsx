@@ -72,7 +72,7 @@ const Home = () => {
 
   return (
     <div className={`${backgroundClass} fsm:px-4 px-2`}>
-      <header className="flex items-center sm:mb-4 mb-0 sm:p-4 p-1">
+      <header className="flex items-center sm:mb-4 mb-2 sm:p-4 p-1">
         <h1 className="text-2xl font-bold pt-2">
           <button onClick={() => location.reload()}>
             <Image
