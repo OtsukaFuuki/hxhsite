@@ -1,4 +1,5 @@
 "use client";
+
 import { useRef, useState } from "react";
 
 export default function AudioPlayerSwitch() {
@@ -7,7 +8,7 @@ export default function AudioPlayerSwitch() {
   const [currentList, setCurrentList] = useState<string[]>([]); // 現在の曲リスト
   const [currentIndex, setCurrentIndex] = useState(0); // 現在の曲のインデックス
   const [currentListName, setCurrentListName] = useState(""); // 現在のリスト名
-  const [volume, setVolume] = useState(1); // 音量設定（1 = 最大、0 = 最小）
+  // const [volume, setVolume] = useState(1); // 音量設定（1 = 最大、0 = 最小）
   const [isReady, setIsReady] = useState(false); // 再生準備が整ったかどうか
 
   // 曲リストの定義
@@ -16,6 +17,7 @@ export default function AudioPlayerSwitch() {
     list2: ["4.mp3", "5.mp3"],
     list3: ["hunter1.mp3"],
     list4: ["6.mp3"],
+    list5: ["7.mp3"],
   };
 
   // 曲リストを選択し再生を開始
@@ -59,13 +61,13 @@ export default function AudioPlayerSwitch() {
   };
 
   // 音量変更
-  const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newVolume = parseFloat(event.target.value);
-    if (audioRef.current) {
-      audioRef.current.volume = newVolume;
-    }
-    setVolume(newVolume);
-  };
+  // const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const newVolume = parseFloat(event.target.value);
+  //   if (audioRef.current) {
+  //     audioRef.current.volume = newVolume;
+  //   }
+  //   setVolume(newVolume);
+  // };
 
   return (
     <div className="space-y-4">
@@ -101,10 +103,16 @@ export default function AudioPlayerSwitch() {
         >
           4(ネテロvsメルエム)
         </button>
+        <button
+          className="px-5 py-1 bg-red-500 text-white rounded text-left"
+          onClick={() => playList("list5")}
+        >
+          5(変わり種)4:56
+        </button>
       </div>
 
       {/* 再生・停止ボタン */}
-      <div className="flex justify-center gap-4">
+      <div className="flex gap-4">
         <button
           className={`px-6 py-2 text-white rounded ${
             isReady
@@ -119,7 +127,7 @@ export default function AudioPlayerSwitch() {
       </div>
 
       {/* 音量調整スライダー */}
-      <div className="flex items-center justify-center gap-2">
+      {/* <div className="flex items-center justify-center gap-2">
         <label htmlFor="volume" className="text-sm text-white">
           音量
         </label>
@@ -144,7 +152,7 @@ export default function AudioPlayerSwitch() {
         つまみで調整できないです⤴︎
         <br />
         音量ボタンで調整ください
-      </p>
+      </p> */}
 
       {/* オーディオ */}
       <audio
