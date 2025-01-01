@@ -8,7 +8,6 @@ import QuizControls from "./feature/Components/QuizControls";
 import { Quiz } from "./feature/Components/Quiz";
 import { quizData } from "./feature/data/quizData";
 import { shuffleArray } from "./feature/utils/arrayUtils";
-import Popup from "./feature/Components/popup";
 
 const Home = () => {
   const [isQuizStarted, setIsQuizStarted] = useState(false);
@@ -20,7 +19,6 @@ const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [numberOfQuestions, setNumberOfQuestions] = useState("全て");
   const [isShuffle, setIsShuffle] = useState(false); // 追加: シャッフル状態
-  const [isPopupOpen, setIsPopupOpen] = useState(false); // ポップアップの表示状態
 
   const backgroundClasses = [
     "background-image2",
@@ -74,7 +72,7 @@ const Home = () => {
 
   return (
     <div className={`${backgroundClass} fsm:px-4 px-2`}>
-      <header className="flex items-center sm:mb-4 mb-2 sm:p-4 p-1 justify-between">
+      <header className="flex items-center sm:mb-4 mb-2 sm:p-4 p-1">
         <h1 className="text-2xl font-bold pt-2">
           <button onClick={() => location.reload()}>
             <Image
@@ -101,25 +99,13 @@ const Home = () => {
           />
         </button>
 
-        {/* ポップアップを表示するボタン */}
-        <button
-          onClick={() => setIsPopupOpen(true)} // ボタンがクリックされたらポップアップを開く
-          className=" text-white rounded"
-        >
-          <Image
-            src="/images/header/1.png"
-            alt="popupヒソカ"
-            width={45}
-            height={45}
-          />
-        </button>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className={`hamburger-icon ${
             isMenuOpen ? "open" : ""
-          } relative flex flex-col justify-between items-center`}
+          } relative flex flex-col ml-auto items-center`}
         >
-          <div className="flex items-center ml-2">
+          <div className="flex items-center ">
             <Image
               src="/images/nav/1.png"
               alt="navBarを案内するキルア"
@@ -165,8 +151,6 @@ const Home = () => {
           )}
         </div>
       )}
-      {/* ポップアップ表示 */}
-      <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </div>
   );
 };
