@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 import DifficultySelector from "./DifficultySelector";
 import ToggleButton from "./toggleButton";
+import Popup from "./popup";
+import Image from "next/image";
 
 type QuizControlsProps = {
   selectedCategory: string;
@@ -22,6 +24,8 @@ const QuizControls: React.FC<QuizControlsProps> = ({
   isShuffle, // 追加
   setIsShuffle, // 追加
 }) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false); // ポップアップの表示状態
+
   const seriesOptions = [
     "全て",
     "ハンター試験編",
@@ -41,7 +45,7 @@ const QuizControls: React.FC<QuizControlsProps> = ({
     <div className="flex flex-col items-center space-y-4 w-full max-w-md bg-customHunter p-4 rounded-lg ">
       <h2 className="text-xl font-bold text-white">
         カテゴリや難易度を設定
-        <p className="text-xs mt-1">(難易度を選択するとクイズが始まります)</p>
+        <p className="text-xs mt-1">(詳しくは下のヒソカをクリック！)</p>
       </h2>
       <div className="bg-customHunter p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full">
         <div className="flex  items-end">
@@ -61,13 +65,27 @@ const QuizControls: React.FC<QuizControlsProps> = ({
               label="問題数"
             />
           </div>
-          <div className="ml-auto">
+          <div className="flex flex-col gap-5 items-center ml-auto">
+            <button
+              onClick={() => setIsPopupOpen(true)}
+              className=" text-white rounded"
+            >
+              <Image
+                src="/images/header/1.png"
+                alt="popupヒソカ"
+                width={70}
+                height={70}
+              />
+            </button>
+
             {/* トグルボタン */}
             <ToggleButton isShuffle={isShuffle} setIsShuffle={setIsShuffle} />
           </div>
         </div>
       </div>
       <DifficultySelector onSelectDifficulty={onSelectDifficulty} />
+      {/* ポップアップ表示 */}
+      <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </div>
   );
 };
