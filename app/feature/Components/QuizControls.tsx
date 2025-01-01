@@ -39,7 +39,10 @@ const QuizControls: React.FC<QuizControlsProps> = ({
 
   return (
     <div className="flex flex-col items-center space-y-4 w-full max-w-md bg-customHunter p-4 rounded-lg ">
-      <h2 className="text-xl font-bold text-white">設定を選択してください</h2>
+      <h2 className="text-xl font-bold text-white">
+        カテゴリや難易度を設定
+        <p className="text-xs mt-1">(難易度を選択するとクイズが始まります)</p>
+      </h2>
       <div className="bg-customHunter p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full">
         <div className="flex  items-end">
           <div className="flex flex-col  gap-5 items-start">

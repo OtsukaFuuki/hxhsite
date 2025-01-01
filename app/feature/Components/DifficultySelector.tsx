@@ -6,7 +6,7 @@ const DifficultySelector: React.FC<DifficultySelectorProps> = ({
   onSelectDifficulty,
 }) => (
   <div className="flex flex-col items-center bg-customHunter p-4 border border-gray-300 rounded shadow-lg max-w-lg w-full min-h-[80px]:">
-    <h1 className="text-xl font-bold text-white">難易度を選択してください</h1>
+    <h1 className="text-lg font-bold text-white">難易度を選択してください</h1>
     <div className="flex flex-col w-full gap-5 mt-3">
       <button
         onClick={() => onSelectDifficulty("easy")}
