@@ -25,7 +25,7 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center z-50 px-2 h-screen transition-opacity duration-500 popup-no-margin  ${
+      className={`fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center z-50 px-2 h-[99%] transition-opacity duration-500 popup-no-margin  ${
         isOpen ? "opacity-100" : "opacity-0"
       }`}
     >
@@ -41,16 +41,16 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           width: "100%",
-          maxHeight: "95vh",
+          maxHeight: "90vh",
           overflow: "hidden", // コンテンツが溢れないようにする
         }}
       >
         {/* 背景にオーバーレイを追加する場合 */}
-        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60 rounded-lg"></div>
 
         <div className="relative text-white z-10">
           <h2 className="text-xl font-bold mb-4">アプリの説明</h2>
-          <div className="max-h-[70vh] overflow-y-auto space-y-6 text-sm leading-6">
+          <div className="max-h-[400px] overflow-y-auto space-y-6 text-sm leading-6">
             <section>
               <h3 className="text-lg font-semibold">画面について</h3>
               <ul className="list-disc pl-3 space-y-1 mt-2">
