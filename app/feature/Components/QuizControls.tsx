@@ -70,6 +70,9 @@ const QuizControls: React.FC<QuizControlsProps> = ({
               onClick={() => setIsPopupOpen(true)}
               className=" text-white rounded"
             >
+              <p className="relative top-[-1px] text-xs text-white font-semibold">
+                \\ 説明するよ //
+              </p>
               <Image
                 src="/images/header/1.png"
                 alt="popupヒソカ"
