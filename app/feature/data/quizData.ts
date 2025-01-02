@@ -440,6 +440,160 @@ export const quizData = {
       category: "会長選挙編",
       image: "/images/Quiz/easy/131.jpg",
     },
+    {
+      id: 151,
+      question: "水見式で「水の量が増える」のはどの系統か？",
+      correctAnswer: ["放出系"],
+      category: "天空闘技場編",
+      image: "/images/Quiz/easy/151.jpg",
+    },
+    {
+      id: 132,
+      question: "水見式で「水の味が変化する」のはどの系統か？",
+      correctAnswer: ["強化系"],
+      category: "天空闘技場編",
+      image: "/images/Quiz/easy/132.jpg",
+    },
+    {
+      id: 133,
+      question: "水見式で「水の色が変化する」のはどの系統か？",
+      correctAnswer: ["変化系"],
+      category: "天空闘技場編",
+      image: "/images/Quiz/easy/133.jpg",
+    },
+    {
+      id: 134,
+      question: "水見式で「水の表面に動きが現れる」のはどの系統か？",
+      correctAnswer: ["操作系"],
+      category: "天空闘技場編",
+      image: "/images/Quiz/easy/134.jpg",
+    },
+    {
+      id: 135,
+      question: "水見式で「水の中に何かが現れる」のはどの系統か？",
+      correctAnswer: ["具現化系"],
+      category: "天空闘技場編",
+      image: "/images/Quiz/easy/135.jpg",
+    },
+    {
+      id: 136,
+      question: "リスキーダイスは何面か？",
+      correctAnswer: ["20"],
+      category: "G・I編",
+      image: "/images/Quiz/easy/136.jpg",
+    },
+    {
+      id: 137,
+      question:
+        "小柄な体型、黒髪で髪を逆立てたようなスタイルで「乙女ちくね」とフィンクスに言い放ち、ブチギレられた幻影旅団のメンバーは誰か？",
+      correctAnswer: ["フェイタン=ポートオ"],
+      category: "ヨークシンシティ編",
+      image: "/images/Quiz/easy/137.jpg",
+    },
+    {
+      id: 138,
+      question:
+        "キメラアント編でザザンと対峙した際に黒い鎧のような防護スーツを身にまとい、自分が受けた痛みを糧にして放つ幻影旅団の団員の念能力は何か？",
+      correctAnswer: ["ペインパッカー"],
+      category: "キメラアント王誕生編",
+      image: "/images/Quiz/easy/138.jpg",
+    },
+    {
+      id: 139,
+      question:
+        "キメラアント編でザザンに繰り出した幻影旅団の団員の念能力の技の一つである「太陽に灼かれて」の別名は何か？",
+      correctAnswer: ["ライジングサン"],
+      category: "キメラアント王誕生編",
+      image: "/images/Quiz/easy/139.jpg",
+    },
+    {
+      id: 140,
+      question:
+        "キメラアント討伐の際、「おめーら腐っても流星街（ここ）の住人だろうが!! 最期まで根性見せやがれ!!!」と激アツな台詞を放ったエジプト風な帽子と衣装を身にまとう幻影旅団のメンバーは誰か？",
+      correctAnswer: ["フィンクス＝マグカブ"],
+      category: "キメラアント王誕生編",
+      image: "/images/Quiz/easy/140.jpg",
+    },
+    {
+      id: 141,
+      question:
+        "キメラアント編でフィンクスが念能力を使い、敵を一撃で倒した際に腕を回した回数は何回か？",
+      correctAnswer: ["15"],
+      category: "キメラアント王誕生編",
+      image: "/images/Quiz/easy/141.jpg",
+    },
+    {
+      id: 142,
+      question:
+        "フィンクスが使う必殺技は、腕を回転させた回数に比例して威力が増大し、一撃で敵を粉砕するほどの破壊力を持つ。この技の名前の正式名称は何か？",
+      correctAnswer: ["リッパー・サイクロトロン", "廻天"],
+      category: "キメラアント王誕生編",
+      image: "/images/Quiz/easy/142.jpg",
+    },
+    {
+      id: 143,
+      question:
+        "冷静かつ鋭い判断を見せる幻影旅団のメンバーで、ピンクの髪と忍者のような服装が特徴的な人物は誰か？",
+      correctAnswer: ["マチ=コマチネ"],
+      category: "ヨークシンシティ編",
+      image: "/images/Quiz/easy/143.jpg",
+    },
+    {
+      id: 144,
+      question:
+        "幻影旅団のメンバーが使う念能力で、細いオーラの糸を縫い合わせる技術に長け、負傷した仲間の治療や拘束にも使われる技の名前は何か？",
+      correctAnswer: ["念糸縫合"],
+      category: "ヨークシンシティ編",
+      image: "/images/Quiz/easy/144.jpg",
+    },
+    {
+      id: 145,
+      question:
+        "幻影旅団のメンバーであり、刀を武器にした近接戦闘を得意とする、冷静さと短気さを併せ持つ剣士の名前は誰か？",
+      correctAnswer: ["ノブナガ＝ハザマ"],
+      category: "ヨークシンシティ編",
+      image: "/images/Quiz/easy/145.jpg",
+    },
+    {
+      id: 146,
+      question:
+        "幻影旅団のメンバーであり、メガネをかけた小柄な女性で、無邪気な性格ながら冷酷な戦闘スタイルを持つ人物は誰か？",
+      correctAnswer: ["シズク＝ムラサキ"],
+      category: "ヨークシンシティ編",
+      image: "/images/Quiz/easy/146.jpg",
+    },
+    {
+      id: 147,
+      question:
+        "シズクが具現化した念能力で、自身の掃除機型オーラ具現化物を使い、あらゆるものを吸い込むことができる能力の正式名称は何か？",
+      correctAnswer: ["デメちゃん"],
+      category: "ヨークシンシティ編",
+      image: "/images/Quiz/easy/147.jpg",
+    },
+    {
+      id: 148,
+      question:
+        "ライオンを彷彿とさせる風貌の巨漢。豪放磊落な性格でタイマン好きの戦闘狂。危険な任務を好む旅団の特攻団員で、見た目通りのパワーファイターである団員番号 11 の幻影旅団のメンバーは誰か？",
+      correctAnswer: ["ウボォーギン"],
+      category: "ヨークシンシティ編",
+      image: "/images/Quiz/easy/148.jpg",
+    },
+    {
+      id: 149,
+      question:
+        "幻影旅団のメンバーで、電脳系の能力を使うことが得意な人物で、普段は冷静で理知的な態度を崩さないが、仲間のためには感情をあらわにする人物は誰か？",
+      correctAnswer: ["シャルナーク=リュウセイ"],
+      category: "ヨークシンシティ編",
+      image: "/images/Quiz/easy/149.jpg",
+    },
+    {
+      id: 150,
+      question:
+        "オリジナルの携帯電話で他人を操ることが出来、付属のアンテナを他人の身体に刺す事が発動条件である幻影旅団のメンバーが使用する念能力は何か？",
+      correctAnswer: ["携帯する他人の運命", "ブラックボイス"],
+      category: "ヨークシンシティ編",
+      image: "/images/Quiz/easy/150.jpg",
+    },
   ],
   // 上級
   hard: [
