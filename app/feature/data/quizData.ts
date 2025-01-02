@@ -98,7 +98,7 @@ export const quizData = {
       question: "キルアは何系の念の能力者か？",
       correctAnswer: ["変化系"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/27.jpg",
+      // image: "/images/Quiz/easy/27.jpg",
     },
     {
       id: 29,
@@ -120,14 +120,14 @@ export const quizData = {
       question: "ハンター試験の際のゴンの受験番号は(数字のみ)？",
       correctAnswer: ["404"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/33.jpg",
+      // image: "/images/Quiz/easy/33.jpg",
     },
     {
       id: 41,
       question: "トリックタワーを一番速くクリアした受験者は？",
       correctAnswer: ["ヒソカ"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/41.jpg",
+      image: "/images/Quiz/easy/41.jpeg",
     },
     {
       id: 46,
@@ -141,7 +141,7 @@ export const quizData = {
       question: "トリックタワーでクラピカに惨敗した囚人といえば？",
       correctAnswer: ["マジタニ"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/52.jpg",
+      image: "/images/Quiz/easy/52.jpeg",
     },
     {
       id: 53,
@@ -149,14 +149,14 @@ export const quizData = {
         "トリックタワーでキルアに惨敗した囚人(ザバン市犯罪史上最悪の大量殺人犯)といえば？",
       correctAnswer: ["ジョネス"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/53.jpg",
+      image: "/images/Quiz/easy/53.jpeg",
     },
     {
       id: 54,
       question: "試しの門の1の扉の片方の重さは何トンか？(数字のみで答えよ)",
       correctAnswer: ["2"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/54.jpg",
+      image: "/images/Quiz/easy/54.jpeg",
     },
     {
       id: 56,
@@ -171,7 +171,7 @@ export const quizData = {
       question: "ゴン達とコインゲームをしたゾルディック家の執事長といえば？",
       correctAnswer: ["ゴトー"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/59.jpg",
+      image: "/images/Quiz/easy/59.jpeg",
     },
     {
       id: 63,
@@ -179,7 +179,7 @@ export const quizData = {
         "天空闘技場のフロアマスターは二年に一度、最上階で開催される何に参加することのできる祭典といえば？",
       correctAnswer: ["バトルオリンピア"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/63.jpg",
+      image: "/images/Quiz/easy/63.jpeg",
     },
     {
       id: 67,
@@ -195,30 +195,16 @@ export const quizData = {
         "幻影旅団のシズクが使用している掃除機の愛称はなんという？(平仮名で答えよ)",
       correctAnswer: ["でめちゃん"],
       category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/69.jpg",
+      image: "/images/Quiz/easy/69.jpeg",
     },
-    {
-      id: 71,
-      question: "十老頭の自慢の10人で構成されている実行部隊といえば？",
-      correctAnswer: ["陰獣"],
-      category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/71.jpg",
-    },
-    {
-      id: 72,
-      question:
-        "ゴンたちの資金調達を手伝う内に仲良くなった元は贋作家といえば？",
-      correctAnswer: ["ゼパイル"],
-      category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/72.jpg",
-    },
+
     {
       id: 73,
       question:
         "政治的空白地でもある、なにを捨てても許される場所といえば何街？",
       correctAnswer: ["流星街"],
       category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/73.jpg",
+      image: "/images/Quiz/easy/73.png",
     },
     {
       id: 75,
@@ -226,14 +212,14 @@ export const quizData = {
         "レオリオはセンリツから「誰よりもあたたかい心音がする」という理由から医師と何の職業に適性があると判断したか？",
       correctAnswer: ["教師"],
       category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/75.jpg",
+      image: "/images/Quiz/easy/75.jpeg",
     },
     {
       id: 80,
       question: "グリードアイランド内で使える魔法の別名は？カタカナ3文字で",
       correctAnswer: ["スペル"],
       category: "G・I編",
-      image: "/images/Quiz/easy/80.jpg",
+      image: "/images/Quiz/easy/80.webp",
     },
     {
       id: 82,
@@ -241,7 +227,7 @@ export const quizData = {
         "一面が大凶、それ以外が大吉と書かれているNo.025のランクB-30のカードといえば？",
       correctAnswer: ["リスキーダイス"],
       category: "G・I編",
-      image: "/images/Quiz/easy/82.jpg",
+      image: "/images/Quiz/easy/82.jpeg",
     },
     {
       id: 83,
@@ -249,7 +235,7 @@ export const quizData = {
         "グリードアイランドの放出系のシステムを担当していた、SSランクカード「一坪の海岸線」ゲットのためのイベントボスキャラといえば？",
       correctAnswer: ["レイザー"],
       category: "G・I編",
-      image: "/images/Quiz/easy/83.jpg",
+      image: "/images/Quiz/easy/83.jpeg",
     },
     {
       id: 87,
@@ -257,7 +243,7 @@ export const quizData = {
         "どんな重症や病気でも治してくれるNo.017のランクSS-3のカードといえば？",
       correctAnswer: ["大天使の息吹"],
       category: "G・I編",
-      image: "/images/Quiz/easy/87.jpg",
+      image: "/images/Quiz/easy/87.png",
     },
     {
       id: 89,
@@ -272,7 +258,7 @@ export const quizData = {
         "ゲンスルーの裏切りに巻き込まれた、GIプレイヤー選考会でゴン達に話しかけてきたあごが大きい男といえば？",
       correctAnswer: ["プーハット"],
       category: "G・I編",
-      image: "/images/Quiz/easy/92.jpg",
+      image: "/images/Quiz/easy/92.jpeg",
     },
     {
       id: 100,
@@ -280,14 +266,14 @@ export const quizData = {
         "パームの師匠でもある、ネテロが連れて来たキメラ＝アント討伐隊の1人といえば？",
       correctAnswer: ["ノヴ"],
       category: "キメラアントNGL編",
-      image: "/images/Quiz/easy/100.jpg",
+      image: "/images/Quiz/easy/100.jpeg",
     },
     {
       id: 102,
       question: "キメラ＝アントの女王は王に何と名前をつけたか？",
       correctAnswer: ["メルエム"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/102.jpg",
+      image: "/images/Quiz/easy/蟻の王.jpg",
     },
     {
       id: 103,
@@ -304,7 +290,7 @@ export const quizData = {
         "戦闘演武曲（バト＝レ・カンタービレ）などの技を使う全身に包帯の幻影旅団のメンバーといえば？",
       correctAnswer: ["ボノレノフ"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/104.jpg",
+      image: "/images/Quiz/easy/104.jpeg",
     },
     {
       id: 105,
@@ -312,7 +298,7 @@ export const quizData = {
         "戦闘演武曲（バト＝レ・カンタービレを使用する際にアニメで流れたクラシックの名曲といえば何か(漢字)",
       correctAnswer: ["木星"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/105.jpg",
+      image: "/images/Quiz/easy/105.jpeg",
     },
     {
       id: 117,
@@ -327,14 +313,23 @@ export const quizData = {
       question: "キルアとアルカの監視を任されたツボネの孫娘でもある執事は？",
       correctAnswer: ["アマネ"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/119.jpg",
+      image: "/images/Quiz/easy/119.jpeg",
     },
     {
       id: 118,
-      question: "キルアが苦手としている執事の老婆といえば？",
+      question:
+        "天空の城ラピュタのドーラにそっくりな人物で、キルアが苦手としている執事の老婆といえば？",
       correctAnswer: ["ツボネ"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/118.jpg",
+      image: "/images/Quiz/easy/118.jpeg",
+    },
+    {
+      id: 152,
+      question:
+        "ツボネがナニカに爪のおねだりをされた時に差し出した爪はどの指のものか？",
+      correctAnswer: ["小指"],
+      category: "会長選挙編",
+      image: "/images/Quiz/easy/152.jpeg",
     },
     {
       id: 122,
@@ -342,7 +337,7 @@ export const quizData = {
         "ネテロは「次期会長を全てのハンターによる投票率何%以上の投票で決める」という遺言を残したか？(数字のみ)",
       correctAnswer: ["95%"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/122.jpg",
+      image: "/images/Quiz/easy/122.jpeg",
     },
   ],
 
@@ -361,7 +356,7 @@ export const quizData = {
         "ゴンは天空闘技場の最初の戦い(1階)の結果、何階からスタートすることになったか？(数字のみで答えよ)",
       correctAnswer: ["50"],
       category: "天空闘技場編",
-      image: "/images/Quiz/easy/10.jpeg",
+      // image: "/images/Quiz/easy/10.jpeg",
     },
     {
       id: 11,
@@ -376,7 +371,7 @@ export const quizData = {
         "ビスケがG・Iに参加した理由は何を手に入れるためか？(間に・を入れて答えよ)",
       correctAnswer: ["ブルー・プラネット"],
       category: "G・I編",
-      image: "/images/Quiz/easy/12.jpg",
+      image: "/images/Quiz/easy/可愛いビスケ.jpeg",
     },
     {
       id: 13,
@@ -384,7 +379,7 @@ export const quizData = {
         "装着しているとすべての呪いを跳ね返すことができランクD-80のカードといえば？",
       correctAnswer: ["聖騎士の首飾り"],
       category: "G・I編",
-      image: "/images/Quiz/easy/13.jpeg",
+      // image: "/images/Quiz/easy/13.jpeg",
     },
     {
       id: 14,
@@ -430,7 +425,7 @@ export const quizData = {
       question: "NGL自治国のNGLはそれぞれ何を意味しているか？",
       correctAnswer: ["ネオグリーンライフ"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/19.jpg",
+      // image: "/images/Quiz/easy/19.jpg",
     },
     {
       id: 131,
@@ -438,49 +433,49 @@ export const quizData = {
         "アルカのおねだりに4回断ったことでミンチ状態になったゾルディック家の女性の執事は？",
       correctAnswer: ["ミツバ"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/131.jpg",
+      image: "/images/Quiz/easy/131.jpeg",
     },
     {
       id: 151,
       question: "水見式で「水の量が増える」のはどの系統か？",
       correctAnswer: ["放出系"],
       category: "天空闘技場編",
-      image: "/images/Quiz/easy/151.jpg",
+      image: "/images/Quiz/easy/151.jpeg",
     },
     {
       id: 132,
       question: "水見式で「水の味が変化する」のはどの系統か？",
       correctAnswer: ["強化系"],
       category: "天空闘技場編",
-      image: "/images/Quiz/easy/132.jpg",
+      // image: "/images/Quiz/easy/132.jpeg",
     },
     {
       id: 133,
       question: "水見式で「水の色が変化する」のはどの系統か？",
       correctAnswer: ["変化系"],
       category: "天空闘技場編",
-      image: "/images/Quiz/easy/133.jpg",
+      // image: "/images/Quiz/easy/133.jpeg",
     },
     {
       id: 134,
       question: "水見式で「水の表面に動きが現れる」のはどの系統か？",
       correctAnswer: ["操作系"],
       category: "天空闘技場編",
-      image: "/images/Quiz/easy/134.jpg",
+      // image: "/images/Quiz/easy/134.jpeg",
     },
     {
       id: 135,
       question: "水見式で「水の中に何かが現れる」のはどの系統か？",
       correctAnswer: ["具現化系"],
       category: "天空闘技場編",
-      image: "/images/Quiz/easy/135.jpg",
+      // image: "/images/Quiz/easy/135.jpeg",
     },
     {
       id: 136,
       question: "リスキーダイスは何面か？",
       correctAnswer: ["20"],
       category: "G・I編",
-      image: "/images/Quiz/easy/136.jpg",
+      image: "/images/Quiz/easy/136.jpeg",
     },
     {
       id: 137,
@@ -504,12 +499,12 @@ export const quizData = {
         "キメラアント編でザザンに繰り出した幻影旅団の団員の念能力の技の一つである「太陽に灼かれて」の別名は何か？",
       correctAnswer: ["ライジングサン"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/139.jpg",
+      image: "/images/Quiz/easy/138.webp",
     },
     {
       id: 140,
       question:
-        "キメラアント討伐の際、「おめーら腐っても流星街（ここ）の住人だろうが!! 最期まで根性見せやがれ!!!」と激アツな台詞を放ったエジプト風な帽子と衣装を身にまとう幻影旅団のメンバーは誰か？",
+        "「おめーら腐ってもここの住人だろうが!! 最期まで根性見せやがれ!!!」と激アツな台詞を放ったエジプト風な帽子と衣装を身にまとう幻影旅団のメンバーは誰か？",
       correctAnswer: ["フィンクス＝マグカブ"],
       category: "キメラアント王誕生編",
       image: "/images/Quiz/easy/140.jpg",
@@ -528,7 +523,7 @@ export const quizData = {
         "フィンクスが使う必殺技は、腕を回転させた回数に比例して威力が増大し、一撃で敵を粉砕するほどの破壊力を持つ。この技の名前の正式名称は何か？",
       correctAnswer: ["リッパー・サイクロトロン", "廻天"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/142.jpg",
+      image: "/images/Quiz/easy/142.jpeg",
     },
     {
       id: 143,
@@ -544,7 +539,7 @@ export const quizData = {
         "幻影旅団のメンバーが使う念能力で、細いオーラの糸を縫い合わせる技術に長け、負傷した仲間の治療や拘束にも使われる技の名前は何か？",
       correctAnswer: ["念糸縫合"],
       category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/144.jpg",
+      image: "/images/Quiz/easy/144.jpeg",
     },
     {
       id: 145,
@@ -602,7 +597,7 @@ export const quizData = {
       question: "200階クラスの戦闘準備期間は何日か？(数字のみ)",
       correctAnswer: ["90"],
       category: "天空闘技場編",
-      image: "/images/Quiz/easy/25.jpg",
+      // image: "/images/Quiz/easy/25.jpeg",
     },
     {
       id: 26,
@@ -619,17 +614,9 @@ export const quizData = {
         "天空闘技場でゴンはヒソカに何対何で敗北したか？(数字対数字で答えよ)",
       correctAnswer: ["11対4"],
       category: "天空闘技場編",
-      image: "/images/Quiz/easy/28.jpg",
+      // image: "/images/Quiz/easy/28.jpeg",
     },
 
-    {
-      id: 31,
-      question:
-        "政治的空白地でもある、なにを捨てても許される場所といえば何街？",
-      correctAnswer: ["流星街"],
-      category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/31.jpg",
-    },
     {
       id: 32,
       question: "初登場時のゴンの年齢は(数字のみ)？",
@@ -673,21 +660,21 @@ export const quizData = {
         "二次試験の教官メンチが課したお題「スシ」といえば何という国の民族料理か？",
       correctAnswer: ["jappon", "JAPPON", "ジャポン"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/38.jpg",
+      image: "/images/Quiz/easy/38.jpeg",
     },
     {
       id: 39,
       question: "トリックタワーの下まで下るまでの制限時間といえば？(数字のみ)",
       correctAnswer: ["72"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/39.jpg",
+      image: "/images/Quiz/easy/39.jpeg",
     },
     {
       id: 40,
       question: "四次試験の通過者は何名か？(数字のみ)",
       correctAnswer: ["9"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/40.jpg",
+      image: "/images/Quiz/easy/40.jpeg",
     },
 
     {
@@ -695,7 +682,7 @@ export const quizData = {
       question: "第二次試験官の美食ハンターの大食漢の男性といえば？",
       correctAnswer: ["ブハラ"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/42.jpg",
+      image: "/images/Quiz/easy/42.jpeg",
     },
     {
       id: 43,
@@ -709,14 +696,14 @@ export const quizData = {
       question: "ヒソカの受験番号といえば？(数字のみ)",
       correctAnswer: ["44"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/44.jpg",
+      image: "/images/Quiz/easy/44.avif",
     },
     {
       id: 45,
       question: "四次試験の舞台となった島は？何島か？",
       correctAnswer: ["ゼビル島"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/45.jpg",
+      image: "/images/Quiz/easy/45.png",
     },
 
     {
@@ -725,14 +712,14 @@ export const quizData = {
         "試験会場に向かうゴン,クラピカ,レオリオを乗せた船が到着した港の名前は？",
       correctAnswer: ["ドーレ港"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/47.jpg",
+      image: "/images/Quiz/easy/47.jpeg",
     },
     {
       id: 48,
       question: "試験会場への道の定食屋での合い言葉といえば？(完答)",
       correctAnswer: ["ステーキ定食、弱火でじっくり"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/48.jpg",
+      image: "/images/Quiz/easy/48.jpeg",
     },
     {
       id: 49,
@@ -747,14 +734,14 @@ export const quizData = {
         "ヌメーレ湿原に生息している、地中に姿を隠していて口を開けながら獲物が通り過ぎるのを待っている生物といえば？",
       correctAnswer: ["マチボッケ"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/50.jpg",
+      image: "/images/Quiz/easy/50.jpeg",
     },
     {
       id: 51,
       question: "トリックタワーの囚人ジョネスの懲役は何年か？(~年で答えよ)",
       correctAnswer: ["968年"],
       category: "ハンター試験編",
-      image: "/images/Quiz/easy/51.jpg",
+      image: "/images/Quiz/easy/51.jpeg",
     },
 
     {
@@ -762,7 +749,7 @@ export const quizData = {
       question: "ククルーマウンテンの標高は何mか？",
       correctAnswer: ["3722m"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/55.jpg",
+      image: "/images/Quiz/easy/55.jpeg",
     },
 
     {
@@ -774,7 +761,7 @@ export const quizData = {
     },
     {
       id: 58,
-      question: "シルバの妻、キルアの母といえば？",
+      question: "シルバの妻、キルアの母といえば(フルネーム)？",
       correctAnswer: ["キキョウ＝ゾルディック"],
       category: "ククルーマウンテン編",
       image: "/images/Quiz/easy/58.jpg",
@@ -785,14 +772,14 @@ export const quizData = {
       question: "オレンジ色の髪の天空闘技場の女性実況アナウンサーといえば？",
       correctAnswer: ["コッコ"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/60.jpg",
+      image: "/images/Quiz/easy/60.jpeg",
     },
     {
       id: 61,
       question: "キルアの出身のククルーマウンテンは何共和国にあるか？",
       correctAnswer: ["パドキア共和国"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/61.jpg",
+      image: "/images/Quiz/easy/61.jpeg",
     },
     {
       id: 62,
@@ -800,29 +787,28 @@ export const quizData = {
         "ゾルディック家邸宅でゴン達に再会したキルアはレオリオを間違って何と呼んだか？",
       correctAnswer: ["リオレオ"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/62.jpg",
+      image: "/images/Quiz/easy/62.jpeg",
     },
-
     {
       id: 64,
       question: "ヒソカの変化形の能力の技「伸縮自在の愛」と書いて何と読む？",
       correctAnswer: ["バンジーガム"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/64.jpg",
+      image: "/images/Quiz/easy/64.jpeg",
     },
     {
       id: 65,
       question: "グリードアイランドの制作販売元といえば？",
       correctAnswer: ["株式会社マリリン"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/65.jpg",
+      image: "/images/Quiz/easy/65.jpeg",
     },
     {
       id: 66,
       question: "ジンの残したROMカードは何というゲームハード専用か？",
       correctAnswer: ["ジョイステーション"],
       category: "ククルーマウンテン編",
-      image: "/images/Quiz/easy/66.jpg",
+      image: "/images/Quiz/easy/66.jpeg",
     },
 
     {
@@ -831,16 +817,7 @@ export const quizData = {
         "幻影旅団団長のクロロの、相手の能力を盗めそれを使う事ができる能力といえば？",
       correctAnswer: ["盗賊の極意", "スキルハンター"],
       category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/68.jpg",
-    },
-
-    {
-      id: 70,
-      question:
-        "ブラックボイスという能力を持つ、ハンターライセンスを所持している幻影旅団のメンバーといえば？(フルネームで答えよ)",
-      correctAnswer: ["シャルナーク＝リュウセイ"],
-      category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/70.jpg",
+      image: "/images/Quiz/easy/68.png",
     },
 
     {
@@ -848,7 +825,7 @@ export const quizData = {
       question: "ネオンの他者の未来を占う特質系能力といえば？",
       correctAnswer: ["天使の自動筆記", "ラブリーゴーストライター"],
       category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/74.jpg",
+      image: "/images/Quiz/easy/74.jpeg",
     },
 
     {
@@ -857,7 +834,7 @@ export const quizData = {
         "ゴン達と再会したレオリオがオススメしたケイタイの機種といえば？(正式名称で答えよ)",
       correctAnswer: ["ビートル07型"],
       category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/76.jpg",
+      image: "/images/Quiz/easy/76.jpeg",
     },
     {
       id: 77,
@@ -865,7 +842,7 @@ export const quizData = {
         "幻影旅団を見て感情むき出しになったクラピカを冷静にさせた、センリツのリラックスに最適な楽曲といえば？",
       correctAnswer: ["野の春"],
       category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/77.jpg",
+      image: "/images/Quiz/easy/77.jpeg",
     },
     {
       id: 78,
@@ -879,7 +856,7 @@ export const quizData = {
       question: "ヨークシンシティは何大陸の西端にある都市か？",
       correctAnswer: ["ヨルビアン大陸"],
       category: "ヨークシンシティ編",
-      image: "/images/Quiz/easy/79.jpg",
+      image: "/images/Quiz/easy/79.jpeg",
     },
 
     {
@@ -887,7 +864,7 @@ export const quizData = {
       question: "バインダーの指定ポケットカードは何箇所か？(数字のみ)",
       correctAnswer: ["100"],
       category: "G・I編",
-      image: "/images/Quiz/easy/81.jpg",
+      image: "/images/Quiz/easy/81.jpeg",
     },
 
     {
@@ -896,21 +873,21 @@ export const quizData = {
         "第288期ハンター試験の合格者をすべて答えなさい。(名前のみでおk)",
       correctAnswer: ["キルア"],
       category: "G・I編",
-      image: "/images/Quiz/easy/84.jpg",
+      image: "/images/Quiz/easy/84.jpeg",
     },
     {
       id: 85,
-      question: "カードの入手難易度ランクは何段階か？(数字のみ)",
+      question: "G・Iのカードの入手難易度ランクは何段階か？(数字のみ)",
       correctAnswer: ["10"],
       category: "G・I編",
-      image: "/images/Quiz/easy/85.jpg",
+      image: "/images/Quiz/easy/85.webp",
     },
     {
       id: 86,
       question: "バインダーの指定フリーポケットカードは何箇所か？(数字のみ)",
       correctAnswer: ["45箇所"],
       category: "G・I編",
-      image: "/images/Quiz/easy/86.jpg",
+      image: "/images/Quiz/easy/86.jpeg",
     },
 
     {
@@ -918,7 +895,7 @@ export const quizData = {
       question: "ゲンスルーの手で掴んだものを爆破する変化系能力といえば？",
       correctAnswer: ["一握りの火薬(リトルフラワー)"],
       category: "G・I編",
-      image: "/images/Quiz/easy/88.jpg",
+      image: "/images/Quiz/easy/88.jpeg",
     },
 
     {
@@ -927,14 +904,14 @@ export const quizData = {
         "ゴン組3人を襲って来たがビスケに敗北しゴン達の修行相手にさせられた賞金首ハンターといえば？(名前のみ)",
       correctAnswer: ["ビノールト"],
       category: "G・I編",
-      image: "/images/Quiz/easy/90.jpg",
+      image: "/images/Quiz/easy/90.jpeg",
     },
     {
       id: 91,
       question: "オークションでGREED ISLANDは何本出品されたか？(数字のみ)",
       correctAnswer: ["7"],
       category: "G・I編",
-      image: "/images/Quiz/easy/91.jpg",
+      // image: "/images/Quiz/easy/91.jpeg",
     },
 
     {
@@ -943,21 +920,21 @@ export const quizData = {
         "ビスケは「呼ぶ時はさん付けしないで、ビスケでいいよ、どうしても付ける場合は○○と呼んで」と言ったか？",
       correctAnswer: ["ビスケちゃま"],
       category: "G・I編",
-      image: "/images/Quiz/easy/93.jpg",
+      image: "/images/Quiz/easy/93.jpeg",
     },
     {
       id: 94,
       question: "ビスケはゴンのことを何の宝石に例えたか？",
       correctAnswer: ["ダイヤモンド"],
       category: "G・I編",
-      image: "/images/Quiz/easy/94.jpg",
+      image: "/images/Quiz/easy/94.jpeg",
     },
     {
       id: 95,
       question: "ビスケはキルアのことを何の宝石に例えたか？",
       correctAnswer: ["サファイヤ"],
       category: "G・I編",
-      image: "/images/Quiz/easy/95.jpg",
+      image: "/images/Quiz/easy/94.jpeg",
     },
     {
       id: 96,
@@ -965,7 +942,7 @@ export const quizData = {
         "ゲームマスターのレイザーが不当に侵入した幻影旅団に使った排除（エリミネイト）の行き先は何大陸か？",
       correctAnswer: ["アイジエン大陸"],
       category: "G・I編",
-      image: "/images/Quiz/easy/96.jpg",
+      image: "/images/Quiz/easy/96.jpeg",
     },
     {
       id: 97,
@@ -973,7 +950,7 @@ export const quizData = {
         "不良のような見た目だが情に厚いビーストハンターといえば？(フルネーム)",
       correctAnswer: ["ナックル＝バイン"],
       category: "キメラアントNGL編",
-      image: "/images/Quiz/easy/97.jpg",
+      image: "/images/Quiz/easy/97.jpeg",
     },
     {
       id: 98,
@@ -989,7 +966,7 @@ export const quizData = {
         "ナックル、シュートの師匠でもある、ネテロが連れて来たキメラ＝アント討伐隊の1人といえば？(フルネーム)",
       correctAnswer: ["モラウ＝マッカーナーシ"],
       category: "キメラアントNGL編",
-      image: "/images/Quiz/easy/99.jpg",
+      image: "/images/Quiz/easy/99.jpeg",
     },
 
     {
@@ -1006,15 +983,15 @@ export const quizData = {
         "人間だった頃の記憶が蘇りゴン達に協力したカメレオン型のキメラアントといえば？",
       correctAnswer: ["メレオロン"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/106.jpg",
+      image: "/images/Quiz/easy/106.jpeg",
     },
     {
       id: 107,
       question:
         "ナックルがゴン,ユピーに対して使った「貸し」「利息」などで「破産」させる技といえば？",
-      correctAnswer: ["天上不知唯我独損（ハコワレ）"],
+      correctAnswer: ["天上不知唯我独損", "ハコワレ"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/107.jpg",
+      // image: "/images/Quiz/easy/107.png",
     },
     {
       id: 108,
@@ -1022,15 +999,15 @@ export const quizData = {
         "ミテネ連邦に加盟していないマサドルデイーゴ総帥による独裁国家といえば？",
       correctAnswer: ["東ゴルトー共和国"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/108.jpg",
+      image: "/images/Quiz/easy/108.jpeg",
     },
     {
       id: 109,
       question:
         "オーラの龍を上空から雨の様に降り注がせたゼノの無差別攻撃技といえば？",
-      correctAnswer: ["龍星群（ドラゴンダイヴ）"],
+      correctAnswer: ["龍星群", "ドラゴンダイヴ"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/109.jpg",
+      image: "/images/Quiz/easy/109.jpeg",
     },
     {
       id: 110,
@@ -1038,7 +1015,7 @@ export const quizData = {
         "ナックルの天上不知唯我独損（ハコワレ）で破産した場合、何日間「絶」状態になり念能力が使えなくなるか？",
       correctAnswer: ["30日間"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/110.jpg",
+      image: "/images/Quiz/easy/110.jpeg",
     },
     {
       id: 111,
@@ -1046,7 +1023,7 @@ export const quizData = {
         "ネテロがメルエムに対して最後に使った超小型,低予算の時限爆弾といえば？",
       correctAnswer: ["貧者の薔薇"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/111.jpg",
+      image: "/images/Quiz/easy/111.jpeg",
     },
     {
       id: 112,
@@ -1054,7 +1031,7 @@ export const quizData = {
         "ダーツゲームでキルアに重症を負わせた半魚人のキメラアントの兄妹といえば？",
       correctAnswer: ["オロソ兄妹"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/112.jpg",
+      image: "/images/Quiz/easy/112.png",
     },
     {
       id: 113,
@@ -1062,7 +1039,7 @@ export const quizData = {
         "ネテロがメルエムに対して使った、観音を顕現させる能力といえば？",
       correctAnswer: ["百式観音(ひゃくしきかんのん)"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/113.jpg",
+      image: "/images/Quiz/easy/113.jpeg",
     },
     {
       id: 114,
@@ -1070,23 +1047,24 @@ export const quizData = {
         "独裁国家の東ゴルトー共和国の亡命などを防ぐための密告システムといえば？",
       correctAnswer: ["指組"],
       category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/114.jpg",
+      // image: "/images/Quiz/easy/114.png",
+      //画像なし
     },
-    {
-      id: 115,
-      question:
-        "フェイタンがキメラ＝アントのザザンを倒した時に使用した、放射熱で周囲を焼きつく技名といえば？",
-      correctAnswer: ["太陽に灼かれて（ライジングサン）"],
-      category: "キメラアント王誕生編",
-      image: "/images/Quiz/easy/115.jpg",
-    },
+    // {
+    //   id: 115,
+    //   question:
+    //     "フェイタンがキメラ＝アントのザザンを倒した時に使用した、放射熱で周囲を焼きつく技名といえば？",
+    //   correctAnswer: ["太陽に灼かれて（ライジングサン）"],
+    //   category: "キメラアント王誕生編",
+    //   image: "/images/Quiz/easy/115.jpeg",
+    // },
     {
       id: 116,
       question:
         "ネテロが会長の時ハンター協会副会長だった、一見ホストっぽい爽やかな青年といえば？(フルネーム)",
       correctAnswer: ["パリストン＝ヒル"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/116.jpg",
+      image: "/images/Quiz/easy/116.jpeg",
     },
 
     {
@@ -1095,14 +1073,14 @@ export const quizData = {
         "十二支んのメンバーでコードネームは辰の最古参の老人といえば？(フルネーム)",
       correctAnswer: ["ボトバイ=ギガンテ"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/120.jpg",
+      image: "/images/Quiz/easy/120.jpeg",
     },
     {
       id: 121,
       question: "レオリオの苗字は？(カタカナ)",
       correctAnswer: ["パラディナイト"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/121.jpg",
+      image: "/images/Quiz/easy/121.jpeg",
     },
 
     {
@@ -1110,7 +1088,7 @@ export const quizData = {
       question: "イルミのヒソカによる評価は何点か？",
       correctAnswer: ["95点"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/123.jpg",
+      image: "/images/Quiz/easy/123.jpeg",
     },
     {
       id: 124,
@@ -1118,7 +1096,7 @@ export const quizData = {
         "十二支んのメンバーでコードネームは卯のバニーガール風の女性といえば？(カナ)",
       correctAnswer: ["ピヨン"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/124.jpg",
+      image: "/images/Quiz/easy/124.jpeg",
     },
     {
       id: 125,
@@ -1126,7 +1104,7 @@ export const quizData = {
         "十二支んのメンバーでコードネームは未の密猟ハンターといえば？(カナ)",
       correctAnswer: ["ギンタ"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/125.jpg",
+      image: "/images/Quiz/easy/125.jpeg",
     },
     {
       id: 126,
@@ -1134,35 +1112,35 @@ export const quizData = {
         "豆のような顔をしているハンター協会事務員といえば？(フルネームで)",
       correctAnswer: ["マーメン＝ビーンズ"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/126.jpg",
+      image: "/images/Quiz/easy/126.jpeg",
     },
     {
       id: 127,
       question: "ツボネの様々な乗り物を具現化する念能力といえば？",
       correctAnswer: ["大和撫子七変化", "ライダーズハイ"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/127.jpg",
+      image: "/images/Quiz/easy/127.jpeg",
     },
     {
       id: 128,
       question: "パリストン＝ヒルの選挙時のスローガンといえば？",
       correctAnswer: ["弱者の痛みの解る会長"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/128.jpg",
+      image: "/images/Quiz/easy/128.jpeg",
     },
     {
       id: 129,
       question: "十二支んのメンバーのカンザイのヒソカによる評価は何点か？",
       correctAnswer: ["85点"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/129.jpg",
+      image: "/images/Quiz/easy/129.jpeg",
     },
     {
       id: 130,
       question: "十二支んのメンバーのピヨンのヒソカによる評価は何点か？",
       correctAnswer: ["77点"],
       category: "会長選挙編",
-      image: "/images/Quiz/easy/130.jpg",
+      image: "/images/Quiz/easy/130.jpeg",
     },
   ],
 };
