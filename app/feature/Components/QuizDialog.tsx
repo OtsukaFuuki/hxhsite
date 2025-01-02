@@ -33,10 +33,10 @@ const QuizDialog: React.FC<QuizDialogProps> = ({
       <div
         className="bg-white text-black p-6 rounded-lg shadow-lg w-[90%]"
         style={{
-          backgroundImage: "url('/images/Quiz/bg1.png')",
+          backgroundImage: "url('/images/Quiz/bg2.png')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "bottom 6% right -44px", // 下方向 20%、右方向 10% に配置
+          backgroundPosition: "bottom 0% right -44px", // 下方向 20%、右方向 10% に配置
         }}
       >
         <h2 className="text-lg font-bold mb-4">設定の確認</h2>
