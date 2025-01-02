@@ -20,7 +20,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, onClose }) => {
         ✕
       </button>
       <div className="p-6 overflow-y-auto h-full">
-        <div>
+        <div className="mt-6">
           <h2 className="text-lg font-bold mb-4">音楽設定</h2>
           <AudioPlayerSwitch />
           <p className="text-xs mt-4">
@@ -28,12 +28,9 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, onClose }) => {
           </p>
           {/* 他の音楽関連コンテンツをここに追加 */}
         </div>
+
         <div className="mt-6">
           <h2 className="text-lg font-bold mb-4">設定1</h2>
-          <p>このアプリの概要について</p>
-        </div>
-        <div className="mt-6">
-          <h2 className="text-lg font-bold mb-4">設定2</h2>
           <p className="font-bold">注意点</p>
           <p className="text-xs mt-1">
             ・画像の表示が遅いので2秒くらい待って！
