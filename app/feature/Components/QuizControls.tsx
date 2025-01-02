@@ -4,6 +4,7 @@ import DifficultySelector from "./DifficultySelector";
 import ToggleButton from "./toggleButton";
 import Popup from "./popup";
 import Image from "next/image";
+import QuizDialog from "./QuizDialog";
 
 type QuizControlsProps = {
   selectedCategory: string;
@@ -13,6 +14,7 @@ type QuizControlsProps = {
   onNumberOfQuestions: (value: string) => void;
   isShuffle: boolean; // 追加: シャッフルの状態
   setIsShuffle: React.Dispatch<React.SetStateAction<boolean>>; // 追加: シャッフルの切り替え
+  onStartQuiz: () => void; // スタート時の処理
 };
 
 const QuizControls: React.FC<QuizControlsProps> = ({
@@ -23,8 +25,13 @@ const QuizControls: React.FC<QuizControlsProps> = ({
   numberOfQuestions,
   isShuffle, // 追加
   setIsShuffle, // 追加
+  onStartQuiz,
 }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false); // ポップアップの表示状態
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<
+    "easy" | "normal" | "hard" | null
+  >(null);
 
   const seriesOptions = [
     "全て",
@@ -40,6 +47,19 @@ const QuizControls: React.FC<QuizControlsProps> = ({
   ];
 
   const NumberOfQuestions = ["全て", "10問", "20問", "30問", "40問", "50問"];
+
+  const handleDifficultySelect = (difficulty: "easy" | "normal" | "hard") => {
+    setSelectedDifficulty(difficulty);
+    setIsDialogOpen(true); // ダイアログを表示
+  };
+
+  const handleStartQuiz = () => {
+    if (selectedDifficulty) {
+      onSelectDifficulty(selectedDifficulty);
+      setIsDialogOpen(false); // ダイアログを閉じる
+      onStartQuiz(); // クイズを開始
+    }
+  };
 
   return (
     <div className="flex flex-col items-center space-y-4 w-full max-w-md bg-customHunter p-4 rounded-lg ">
@@ -65,6 +85,7 @@ const QuizControls: React.FC<QuizControlsProps> = ({
               label="問題数"
             />
           </div>
+
           <div className="flex flex-col gap-5 items-center ml-auto">
             <button
               onClick={() => setIsPopupOpen(true)}
@@ -86,9 +107,18 @@ const QuizControls: React.FC<QuizControlsProps> = ({
           </div>
         </div>
       </div>
-      <DifficultySelector onSelectDifficulty={onSelectDifficulty} />
+      <DifficultySelector onSelectDifficulty={handleDifficultySelect} />
       {/* ポップアップ表示 */}
       <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+      <QuizDialog
+        isOpen={isDialogOpen}
+        onClose={() => setIsDialogOpen(false)}
+        onStart={handleStartQuiz}
+        selectedCategory={selectedCategory}
+        numberOfQuestions={numberOfQuestions}
+        isShuffle={isShuffle}
+        selectedDifficulty={selectedDifficulty}
+      />
     </div>
   );
 };

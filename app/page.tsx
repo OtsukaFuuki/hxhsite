@@ -140,6 +140,7 @@ const Home = () => {
               onNumberOfQuestions={setNumberOfQuestions}
               isShuffle={isShuffle} // シャッフル状態を渡す
               setIsShuffle={setIsShuffle} // 状態更新関数を渡す
+              onStartQuiz={() => setIsQuizStarted(true)} // スタート時にクイズを開始
             />
           ) : (
             <Quiz
