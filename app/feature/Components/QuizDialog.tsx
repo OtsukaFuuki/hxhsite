@@ -39,7 +39,9 @@ const QuizDialog: React.FC<QuizDialogProps> = ({
           backgroundPosition: "bottom 0% right -44px", // 下方向 20%、右方向 10% に配置
         }}
       >
-        <h2 className="text-lg font-bold mb-4">設定の確認</h2>
+        <h2 className="text-base font-bold mb-4">
+          選択した設定はあっていますか！？
+        </h2>
 
         <div className="flex items-center mb-8">
           <ul className="flex flex-col items-end space-y-1 font-semibold w-[100px]">
@@ -67,7 +69,7 @@ const QuizDialog: React.FC<QuizDialogProps> = ({
             onClick={onStart}
             className="px-4 py-2 bg-customGreen text-white rounded hover:bg-customGreen-dark"
           >
-            スタート
+            問題へ進む
           </button>
         </div>
       </div>
