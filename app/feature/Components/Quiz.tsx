@@ -1,7 +1,7 @@
 // Quizコンポーネント
 
-import { useState } from "react";
-import { Question } from "./Questioin";
+import { useState } from 'react';
+import { Question } from './Questioin';
 
 type QuizProps = {
   questions: {
@@ -10,7 +10,7 @@ type QuizProps = {
     correctAnswer: string[];
     category: string;
   }[];
-  difficulty: "easy" | "normal" | "hard";
+  difficulty: 'easy' | 'normal' | 'hard';
   onRestart: () => void;
   setIsQuizStarted: React.Dispatch<React.SetStateAction<boolean>>; // setIsQuizStarted を受け取る
 };
@@ -101,7 +101,7 @@ export const Quiz = ({ questions, onRestart }: QuizProps) => {
                     <strong>あなたの回答 :</strong> {answer.userAnswer}
                   </div>
                   <div className="text-left">
-                    <strong>正解 :</strong> {answer.correctAnswer.join(", ")}
+                    <strong>正解 :</strong> {answer.correctAnswer.join(', ')}
                   </div>
                 </li>
               ))}
@@ -125,7 +125,7 @@ export const Quiz = ({ questions, onRestart }: QuizProps) => {
           previousAnswer={
             answers.find(
               (answer) => answer.question === questions[currentIndex].question
-            )?.userAnswer || "" // 戻るときに以前の回答を表示
+            )?.userAnswer || '' // 戻るときに以前の回答を表示
           }
         />
       )}

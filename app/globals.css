@@ -7,7 +7,7 @@
 }
 
 .background-image1 {
-  background-image: url("/images/background/sp/sp-1.jpeg");
+  background-image: url('/images/background/sp/sp-1.jpeg');
   background-size: cover; /* 画像を全体にフィットさせる */
   background-repeat: no-repeat; /* 画像を繰り返さない */
   background-position: center; /* 中央に配置 */
@@ -15,7 +15,7 @@
   height: 100vh;
 }
 .background-image2 {
-  background-image: url("/images/background/sp/sp-2.jpeg");
+  background-image: url('/images/background/sp/sp-2.jpeg');
   background-size: cover; /* 画像を全体にフィットさせる */
   background-repeat: no-repeat; /* 画像を繰り返さない */
   background-position: center; /* 中央に配置 */
@@ -23,7 +23,7 @@
   height: 100vh;
 }
 .background-image3 {
-  background-image: url("/images/background/sp/sp-3.jpeg");
+  background-image: url('/images/background/sp/sp-3.jpeg');
   background-size: cover; /* 画像を全体にフィットさせる */
   background-repeat: no-repeat; /* 画像を繰り返さない */
   background-position: center; /* 中央に配置 */
@@ -31,7 +31,7 @@
   height: 100vh;
 }
 .background-image3 {
-  background-image: url("/images/background/sp/sp-3.jpeg");
+  background-image: url('/images/background/sp/sp-3.jpeg');
   background-size: cover; /* 画像を全体にフィットさせる */
   background-repeat: no-repeat; /* 画像を繰り返さない */
   background-position: center; /* 中央に配置 */
@@ -39,7 +39,7 @@
   height: 100vh;
 }
 .background-image4 {
-  background-image: url("/images/background/sp/sp-4.jpeg");
+  background-image: url('/images/background/sp/sp-4.jpeg');
   background-size: cover; /* 画像を全体にフィットさせる */
   background-repeat: no-repeat; /* 画像を繰り返さない */
   background-position: center; /* 中央に配置 */
@@ -47,7 +47,7 @@
   height: 100vh;
 }
 .background-image5 {
-  background-image: url("/images/background/sp/sp-5.jpeg");
+  background-image: url('/images/background/sp/sp-5.jpeg');
   background-size: cover; /* 画像を全体にフィットさせる */
   background-repeat: no-repeat; /* 画像を繰り返さない */
   background-position: center; /* 中央に配置 */
@@ -55,7 +55,7 @@
   height: 100vh;
 }
 .background-image6 {
-  background-image: url("/images/background/sp/sp-6.jpeg");
+  background-image: url('/images/background/sp/sp-6.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -64,7 +64,7 @@
 }
 
 .background-image7 {
-  background-image: url("/images/background/sp/sp-7.jpeg");
+  background-image: url('/images/background/sp/sp-7.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -73,7 +73,7 @@
 }
 
 .background-image8 {
-  background-image: url("/images/background/sp/sp-8.jpeg");
+  background-image: url('/images/background/sp/sp-8.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -82,7 +82,7 @@
 }
 
 .background-image9 {
-  background-image: url("/images/background/sp/sp-9.jpeg");
+  background-image: url('/images/background/sp/sp-9.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -91,7 +91,7 @@
 }
 
 .background-image10 {
-  background-image: url("/images/background/sp/sp-10.jpeg");
+  background-image: url('/images/background/sp/sp-10.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -100,7 +100,7 @@
 }
 
 .background-image11 {
-  background-image: url("/images/background/sp/sp-11.jpeg");
+  background-image: url('/images/background/sp/sp-11.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -109,7 +109,7 @@
 }
 
 .background-image12 {
-  background-image: url("/images/background/sp/sp-12.jpeg");
+  background-image: url('/images/background/sp/sp-12.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -118,7 +118,7 @@
 }
 
 .background-image13 {
-  background-image: url("/images/background/sp/sp-13.jpeg");
+  background-image: url('/images/background/sp/sp-13.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -127,7 +127,7 @@
 }
 
 .background-image14 {
-  background-image: url("/images/background/sp/sp-14.jpeg");
+  background-image: url('/images/background/sp/sp-14.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -136,7 +136,7 @@
 }
 
 .background-image15 {
-  background-image: url("/images/background/sp/sp-15.jpeg");
+  background-image: url('/images/background/sp/sp-15.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -145,7 +145,7 @@
 }
 
 .background-image16 {
-  background-image: url("/images/background/sp/sp-16.jpeg");
+  background-image: url('/images/background/sp/sp-16.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -154,7 +154,7 @@
 }
 
 .background-image17 {
-  background-image: url("/images/background/sp/sp-17.jpeg");
+  background-image: url('/images/background/sp/sp-17.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -163,7 +163,7 @@
 }
 
 .background-image18 {
-  background-image: url("/images/background/sp/sp-18.jpeg");
+  background-image: url('/images/background/sp/sp-18.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -172,7 +172,7 @@
 }
 
 .background-image19 {
-  background-image: url("/images/background/sp/sp-19.jpeg");
+  background-image: url('/images/background/sp/sp-19.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -181,7 +181,7 @@
 }
 
 .background-image20 {
-  background-image: url("/images/background/sp/sp-20.jpeg");
+  background-image: url('/images/background/sp/sp-20.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -190,7 +190,7 @@
 }
 
 .background-image21 {
-  background-image: url("/images/background/sp/sp-21.jpeg");
+  background-image: url('/images/background/sp/sp-21.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -199,7 +199,7 @@
 }
 
 .background-image22 {
-  background-image: url("/images/background/sp/sp-22.jpeg");
+  background-image: url('/images/background/sp/sp-22.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -208,7 +208,7 @@
 }
 
 .background-image23 {
-  background-image: url("/images/background/sp/sp-23.jpeg");
+  background-image: url('/images/background/sp/sp-23.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -217,7 +217,7 @@
 }
 
 .background-image24 {
-  background-image: url("/images/background/sp/sp-24.jpeg");
+  background-image: url('/images/background/sp/sp-24.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -226,7 +226,7 @@
 }
 
 .background-image25 {
-  background-image: url("/images/background/sp/sp-25.jpeg");
+  background-image: url('/images/background/sp/sp-25.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -235,7 +235,7 @@
 }
 
 .background-image26 {
-  background-image: url("/images/background/sp/sp-26.jpeg");
+  background-image: url('/images/background/sp/sp-26.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -244,7 +244,7 @@
 }
 
 .background-image27 {
-  background-image: url("/images/background/sp/sp-27.jpeg");
+  background-image: url('/images/background/sp/sp-27.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -253,7 +253,7 @@
 }
 
 .background-image28 {
-  background-image: url("/images/background/sp/sp-28.jpeg");
+  background-image: url('/images/background/sp/sp-28.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -262,7 +262,7 @@
 }
 
 .background-image29 {
-  background-image: url("/images/background/sp/sp-29.jpeg");
+  background-image: url('/images/background/sp/sp-29.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -271,7 +271,7 @@
 }
 
 .background-image30 {
-  background-image: url("/images/background/sp/sp-30.jpeg");
+  background-image: url('/images/background/sp/sp-30.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -280,7 +280,7 @@
 }
 
 .background-image31 {
-  background-image: url("/images/background/sp/sp-31.jpeg");
+  background-image: url('/images/background/sp/sp-31.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -289,7 +289,7 @@
 }
 
 .background-image32 {
-  background-image: url("/images/background/sp/sp-32.jpeg");
+  background-image: url('/images/background/sp/sp-32.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -298,7 +298,7 @@
 }
 
 .background-image33 {
-  background-image: url("/images/background/sp/sp-33.jpeg");
+  background-image: url('/images/background/sp/sp-33.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -307,7 +307,7 @@
 }
 
 .background-image34 {
-  background-image: url("/images/background/sp/sp-34.jpeg");
+  background-image: url('/images/background/sp/sp-34.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -316,7 +316,7 @@
 }
 
 .background-image35 {
-  background-image: url("/images/background/sp/sp-35.jpeg");
+  background-image: url('/images/background/sp/sp-35.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -325,7 +325,7 @@
 }
 
 .background-image36 {
-  background-image: url("/images/background/sp/sp-36.jpeg");
+  background-image: url('/images/background/sp/sp-36.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -333,7 +333,7 @@
   height: 100vh;
 }
 .background-image37 {
-  background-image: url("/images/background/sp/sp-37.jpeg");
+  background-image: url('/images/background/sp/sp-37.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -341,7 +341,7 @@
   height: 100vh;
 }
 .background-image38 {
-  background-image: url("/images/background/sp/sp-38.jpeg");
+  background-image: url('/images/background/sp/sp-38.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -350,7 +350,7 @@
 }
 
 .background-image39 {
-  background-image: url("/images/background/sp/sp-39.jpeg");
+  background-image: url('/images/background/sp/sp-39.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -359,7 +359,7 @@
 }
 
 .background-image40 {
-  background-image: url("/images/background/sp/sp-40.jpeg");
+  background-image: url('/images/background/sp/sp-40.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -368,7 +368,7 @@
 }
 
 .background-image41 {
-  background-image: url("/images/background/sp/sp-41.jpeg");
+  background-image: url('/images/background/sp/sp-41.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -377,7 +377,7 @@
 }
 /* 固定の画像 */
 .background-image0 {
-  background-image: url("/images/background/sp/sp-35.jpeg");
+  background-image: url('/images/background/sp/sp-35.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -402,7 +402,7 @@
 
 /* input rangeを強制的に上書きして実装する */
 
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none;
   appearance: none;
   outline: none;
@@ -415,7 +415,7 @@ input[type="range"] {
 }
 
 /* Thumb: Chrome, Safari, Opera, Edge Chromium */
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   height: 20px;
@@ -425,7 +425,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* Thumb: Firefox */
-input[type="range"]::-moz-range-thumb {
+input[type='range']::-moz-range-thumb {
   border: none;
   height: 20px;
   width: 20px;

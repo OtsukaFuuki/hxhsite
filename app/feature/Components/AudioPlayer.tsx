@@ -1,23 +1,23 @@
-"use client";
+'use client';
 
-import { useRef, useState } from "react";
+import { useRef, useState } from 'react';
 
 export default function AudioPlayerSwitch() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentList, setCurrentList] = useState<string[]>([]); // 現在の曲リスト
   const [currentIndex, setCurrentIndex] = useState(0); // 現在の曲のインデックス
-  const [currentListName, setCurrentListName] = useState(""); // 現在のリスト名
+  const [currentListName, setCurrentListName] = useState(''); // 現在のリスト名
   // const [volume, setVolume] = useState(1); // 音量設定（1 = 最大、0 = 最小）
   const [isReady, setIsReady] = useState(false); // 再生準備が整ったかどうか
 
   // 曲リストの定義
   const songLists = {
-    list1: ["1.mp3", "2.mp3", "3.mp3"],
-    list2: ["4.mp3", "5.mp3"],
-    list3: ["hunter1.mp3"],
-    list4: ["6.mp3"],
-    list5: ["7.mp3"],
+    list1: ['1.mp3', '2.mp3', '3.mp3'],
+    list2: ['4.mp3', '5.mp3'],
+    list3: ['hunter1.mp3'],
+    list4: ['6.mp3'],
+    list5: ['7.mp3'],
   };
 
   // 曲リストを選択し再生を開始
@@ -75,37 +75,37 @@ export default function AudioPlayerSwitch() {
       <div className="text-left text-sm font-semibold">
         {currentListName
           ? `再生中のリスト: ${currentListName}`
-          : "下記の再生リストを選択して下さい"}
+          : '下記の再生リストを選択して下さい'}
       </div>
       {/* リスト再生ボタン */}
       <div className="flex flex-col gap-2">
         <button
           className="px-5 py-1 bg-blue-500 text-white rounded text-left"
-          onClick={() => playList("list1")}
+          onClick={() => playList('list1')}
         >
           1(旅団3曲)
         </button>
         <button
           className="px-5 py-1 bg-green-500 text-white rounded text-left"
-          onClick={() => playList("list2")}
+          onClick={() => playList('list2')}
         >
           2(ヒソカ2曲)
         </button>
         <button
           className="px-5 py-1 bg-red-500 text-white rounded text-left"
-          onClick={() => playList("list3")}
+          onClick={() => playList('list3')}
         >
           3(エンドレス大地踏み締めて)
         </button>
         <button
           className="px-5 py-1 bg-red-500 text-white rounded text-left"
-          onClick={() => playList("list4")}
+          onClick={() => playList('list4')}
         >
           4(ネテロvsメルエム)
         </button>
         <button
           className="px-5 py-1 bg-red-500 text-white rounded text-left"
-          onClick={() => playList("list5")}
+          onClick={() => playList('list5')}
         >
           5(変わり種)4:56
         </button>
@@ -116,13 +116,13 @@ export default function AudioPlayerSwitch() {
         <button
           className={`px-6 py-2 text-white rounded ${
             isReady
-              ? "bg-customGreen hover:bg-customGreen-dark"
-              : "bg-gray-300 cursor-not-allowed"
+              ? 'bg-customGreen hover:bg-customGreen-dark'
+              : 'bg-gray-300 cursor-not-allowed'
           }`}
           onClick={togglePlay}
           disabled={!isReady}
         >
-          {isPlaying ? "停止" : "再生"}
+          {isPlaying ? '停止' : '再生'}
         </button>
       </div>
 

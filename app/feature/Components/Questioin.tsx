@@ -1,6 +1,6 @@
 // Questionコンポーネント
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 type QuestionProps = {
   quiz: {
@@ -36,7 +36,7 @@ export const Question = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onAnswer(userAnswer); // 回答を親コンポーネントに渡す
-    setUserAnswer(""); // 回答後に入力欄をリセット
+    setUserAnswer(''); // 回答後に入力欄をリセット
   };
 
   return (
@@ -60,7 +60,7 @@ export const Question = ({
 
       <div className="mb-4 m-w-[291px] h-[250px] relative">
         <Image
-          src={quiz.image ? quiz.image : "/images/Quiz/noimg.png"}
+          src={quiz.image ? quiz.image : '/images/Quiz/noimg.png'}
           alt={quiz.question}
           layout="fill"
           objectFit="cover"

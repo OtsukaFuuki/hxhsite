@@ -1,5 +1,5 @@
-import React from "react";
-import AudioPlayerSwitch from "./AudioPlayer";
+import React from 'react';
+import AudioPlayerSwitch from './AudioPlayer';
 
 type HamburgerMenuProps = {
   isOpen: boolean;
@@ -9,18 +9,18 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, onClose }) => {
   return (
     <div
       className={`fixed z-50 top-0 right-0 h-screen bg-gray-800 text-white transform ${
-        isOpen ? "translate-x-0" : "translate-x-full"
+        isOpen ? 'translate-x-0' : 'translate-x-full'
       } transition-transform duration-300 ease-in-out`}
       style={{
-        width: "85%",
+        width: '85%',
         backgroundImage: "url('/images/menu/14.jpeg')",
         // backgroundImage: "url('/images/menu/2.jpeg')",
         //個人的に9か11が好き
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        height: "100vh",
-        overflow: "hidden",
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        height: '100vh',
+        overflow: 'hidden',
       }}
     >
       {/* 背景にオーバーレイを追加する場合 */}

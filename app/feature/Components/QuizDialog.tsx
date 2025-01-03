@@ -5,12 +5,12 @@ type QuizDialogProps = {
   selectedCategory: string;
   numberOfQuestions: string;
   isShuffle: boolean;
-  selectedDifficulty: "easy" | "normal" | "hard" | null;
+  selectedDifficulty: 'easy' | 'normal' | 'hard' | null;
 };
-const difficultyLabels: Record<"easy" | "normal" | "hard", string> = {
-  easy: "初級",
-  normal: "中級",
-  hard: "上級",
+const difficultyLabels: Record<'easy' | 'normal' | 'hard', string> = {
+  easy: '初級',
+  normal: '中級',
+  hard: '上級',
 };
 
 const QuizDialog: React.FC<QuizDialogProps> = ({
@@ -34,9 +34,9 @@ const QuizDialog: React.FC<QuizDialogProps> = ({
         className="bg-white text-black p-6 rounded-lg shadow-lg w-[90%]"
         style={{
           backgroundImage: "url('/images/Quiz/bg2.png')",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "bottom 0% right -44px", // 下方向 20%、右方向 10% に配置
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'bottom 0% right -44px', // 下方向 20%、右方向 10% に配置
         }}
       >
         <h2 className="text-base font-bold mb-4">
@@ -53,7 +53,7 @@ const QuizDialog: React.FC<QuizDialogProps> = ({
           <ul className="space-y-1">
             <li className="ml-2">{selectedCategory}</li>
             <li className="ml-2">{numberOfQuestions}</li>
-            <li className="ml-2">{isShuffle ? "有効" : "無効"}</li>
+            <li className="ml-2">{isShuffle ? '有効' : '無効'}</li>
             <li className="ml-2">{displayedDifficulty}</li>
           </ul>
         </div>
