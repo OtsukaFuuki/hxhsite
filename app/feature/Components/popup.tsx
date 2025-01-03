@@ -1,5 +1,5 @@
 // components/Popup.tsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 interface PopupProps {
   isOpen: boolean;
@@ -26,23 +26,23 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
   return (
     <div
       className={`fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center z-50 px-2  transition-opacity duration-500 popup-no-margin  ${
-        isOpen ? "opacity-100" : "opacity-0"
+        isOpen ? 'opacity-100' : 'opacity-0'
       }`}
     >
       <div
         className={`bg-white p-6 rounded-lg shadow-lg max-w-md w-full transition-all duration-500 transform ${
           isOpen
-            ? "scale-100 opacity-100 translate-y-0"
-            : "scale-90 opacity-0 translate-y-10"
+            ? 'scale-100 opacity-100 translate-y-0'
+            : 'scale-90 opacity-0 translate-y-10'
         }`}
         style={{
           backgroundImage: "url('/images/des/1.jpeg')",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          width: "100%",
-          maxHeight: "90vh",
-          overflow: "hidden", // コンテンツが溢れないようにする
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          width: '100%',
+          maxHeight: '90vh',
+          overflow: 'hidden', // コンテンツが溢れないようにする
         }}
       >
         {/* 背景にオーバーレイを追加する場合 */}
@@ -54,9 +54,9 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
             <section>
               <h3 className="text-lg font-semibold">画面について</h3>
               <ul className="list-disc pl-3 space-y-1 mt-2">
-                <li style={{ listStyle: "none" }}>1. スタート画面</li>
-                <li style={{ listStyle: "none" }}>2. 選択画面</li>
-                <li style={{ listStyle: "none" }}>3. クイズ画面</li>
+                <li style={{ listStyle: 'none' }}>1. スタート画面</li>
+                <li style={{ listStyle: 'none' }}>2. 選択画面</li>
+                <li style={{ listStyle: 'none' }}>3. クイズ画面</li>
               </ul>
 
               <h3 className="text-lg font-semibold mt-2">各種機能について</h3>

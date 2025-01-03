@@ -1,45 +1,45 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import HamburgerMenu from "./feature/Components/HamburgerMenu";
-import QuizControls from "./feature/Components/QuizControls";
-import { Quiz } from "./feature/Components/Quiz";
-import { quizData } from "./feature/data/quizData";
-import { shuffleArray } from "./feature/utils/arrayUtils";
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import HamburgerMenu from './feature/Components/HamburgerMenu';
+import QuizControls from './feature/Components/QuizControls';
+import { Quiz } from './feature/Components/Quiz';
+import { quizData } from './feature/data/quizData';
+import { shuffleArray } from './feature/utils/arrayUtils';
 
 const Home = () => {
   const [isQuizStarted, setIsQuizStarted] = useState(false);
   const [difficulty, setDifficulty] = useState<
-    "easy" | "normal" | "hard" | null
+    'easy' | 'normal' | 'hard' | null
   >(null);
-  const [backgroundClass, setBackgroundClass] = useState("");
-  const [category, setCategory] = useState("全て");
+  const [backgroundClass, setBackgroundClass] = useState('');
+  const [category, setCategory] = useState('全て');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [numberOfQuestions, setNumberOfQuestions] = useState("全て");
+  const [numberOfQuestions, setNumberOfQuestions] = useState('全て');
   const [isShuffle, setIsShuffle] = useState(false); // 追加: シャッフル状態
 
   const backgroundClasses = [
-    "background-image2",
-    "background-image4",
-    "background-image5",
-    "background-image7",
-    "background-image8",
-    "background-image13",
-    "background-image14",
-    "background-image15",
-    "background-image29",
-    "background-image34",
-    "background-image36",
-    "background-image39",
+    'background-image2',
+    'background-image4',
+    'background-image5',
+    'background-image7',
+    'background-image8',
+    'background-image13',
+    'background-image14',
+    'background-image15',
+    'background-image29',
+    'background-image34',
+    'background-image36',
+    'background-image39',
   ];
 
   useEffect(() => {
     if (isQuizStarted) {
       changeBackground();
     } else {
-      setBackgroundClass("background-image0");
+      setBackgroundClass('background-image0');
     }
   }, [isQuizStarted]);
 
@@ -53,14 +53,16 @@ const Home = () => {
 
   // 問題を絞り込む
   const filteredQuestions = difficulty
-    ? quizData[difficulty]
+    ? quizData
         .filter(
-          (question) => category === "全て" || question.category === category
+          (question) =>
+            question.level === difficulty &&
+            (category === '全て' || question.category === category)
         )
         .slice(
           0,
-          numberOfQuestions === "全て"
-            ? quizData[difficulty].length
+          numberOfQuestions === '全て'
+            ? quizData.length
             : parseInt(numberOfQuestions)
         )
     : [];
@@ -88,7 +90,7 @@ const Home = () => {
           disabled={!isQuizStarted}
           className="text-sm text-white rounded"
           style={{
-            pointerEvents: isQuizStarted ? "auto" : "none",
+            pointerEvents: isQuizStarted ? 'auto' : 'none',
           }}
         >
           <Image
@@ -102,7 +104,7 @@ const Home = () => {
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className={`hamburger-icon ${
-            isMenuOpen ? "open" : ""
+            isMenuOpen ? 'open' : ''
           } relative flex flex-col ml-auto items-center`}
         >
           <div className="flex items-center ">

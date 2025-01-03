@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import Dropdown from "./Dropdown";
-import DifficultySelector from "./DifficultySelector";
-import ToggleButton from "./toggleButton";
-import Popup from "./popup";
-import Image from "next/image";
-import QuizDialog from "./QuizDialog";
+import React, { useState } from 'react';
+import Dropdown from './Dropdown';
+import DifficultySelector from './DifficultySelector';
+import ToggleButton from './toggleButton';
+import Popup from './popup';
+import Image from 'next/image';
+import QuizDialog from './QuizDialog';
 
 type QuizControlsProps = {
   selectedCategory: string;
   onSelectCategory: (value: string) => void;
-  onSelectDifficulty: (value: "easy" | "normal" | "hard") => void;
+  onSelectDifficulty: (value: 'easy' | 'normal' | 'hard') => void;
   numberOfQuestions: string;
   onNumberOfQuestions: (value: string) => void;
   isShuffle: boolean; // 追加: シャッフルの状態
@@ -30,25 +30,25 @@ const QuizControls: React.FC<QuizControlsProps> = ({
   const [isPopupOpen, setIsPopupOpen] = useState(false); // ポップアップの表示状態
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<
-    "easy" | "normal" | "hard" | null
+    'easy' | 'normal' | 'hard' | null
   >(null);
 
   const seriesOptions = [
-    "全て",
-    "ハンター試験編",
-    "ククルーマウンテン編",
-    "天空闘技場編",
-    "ヨークシンシティ編",
-    "G・I編",
-    "キメラアントNGL編",
-    "キメラアント王誕生編",
-    "会長選挙編",
-    "アルカ編",
+    '全て',
+    'ハンター試験編',
+    'ククルーマウンテン編',
+    '天空闘技場編',
+    'ヨークシンシティ編',
+    'G・I編',
+    'キメラアントNGL編',
+    'キメラアント王誕生編',
+    '会長選挙編',
+    'アルカ編',
   ];
 
-  const NumberOfQuestions = ["全て", "10問", "20問", "30問", "40問", "50問"];
+  const NumberOfQuestions = ['全て', '10問', '20問', '30問', '40問', '50問'];
 
-  const handleDifficultySelect = (difficulty: "easy" | "normal" | "hard") => {
+  const handleDifficultySelect = (difficulty: 'easy' | 'normal' | 'hard') => {
     setSelectedDifficulty(difficulty);
     setIsDialogOpen(true); // ダイアログを表示
   };
