@@ -414,6 +414,8 @@ input[type='range'] {
   border-radius: 8px;
 }
 
+/* 音量バーの色の変更 */
+
 /* Thumb: Chrome, Safari, Opera, Edge Chromium */
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;

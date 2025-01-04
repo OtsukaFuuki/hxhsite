@@ -3,8 +3,8 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import HamburgerMenu from './feature/Components/HamburgerMenu';
-import QuizControls from './feature/Components/QuizControls';
+import HamburgerMenu from './feature/Components/menu';
+import QuizControls from './feature/Components/SelectMenu';
 import { Quiz } from './feature/Components/Quiz';
 import { quizData } from './feature/data/quizData';
 import { shuffleArray } from './feature/utils/arrayUtils';
@@ -123,10 +123,10 @@ const Home = () => {
       <HamburgerMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
       {!isQuizStarted ? (
-        <div className="flex flex-col items-center justify-center mt-40">
+        <div className="flex flex-col items-center justify-center mt-40 animate-bounce">
           <button
             onClick={() => setIsQuizStarted(true)}
-            className="bg-yellow-500 text-white w-32 h-32 rounded-full hover:bg-customGreen-dark flex items-center justify-center text-lg font-bold"
+            className="bg-yellow-500 text-white w-32 h-32 rounded-full hover:bg-customGreen-dark flex items-center justify-center text-lg font-bold "
           >
             Start
           </button>
