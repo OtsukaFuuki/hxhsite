@@ -124,7 +124,7 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
                 <li>最後に設定した内容の確認メッセージが表示されます。</li>
               </ul>
               <h4 className="font-semibold pl-2 mt-1">3. クイズ画面</h4>
-              <ul className="list-decimal pl-10 space-y-1 mt-1">
+              <ul className="list-decimal pl-10 space-y-1 mt-1 text-xs sm:text-base">
                 <li>問題が表示されます。答えを入力して下さい。</li>
                 <li>
                   「回答する」ボタンを押下すると次の問題に進みます。空欄のままでもボタンは押下できます。
