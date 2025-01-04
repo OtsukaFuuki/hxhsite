@@ -6,14 +6,6 @@ export const quizData = [
    *                                                                                         *
    *******************************************************************************************/
   {
-    id: 1,
-    question: 'この画像の人物の名前は？(フルネームでも名前のみでも可)',
-    correctAnswer: ['ゴン＝フリークス', 'ゴン'],
-    category: 'ハンター試験編',
-    image: '/images/Quiz/easy/1.jpeg',
-    level: 'easy',
-  },
-  {
     id: 2,
     question: 'この画像の人物の名前は？(フルネームでも名前のみでも可)',
     correctAnswer: ['キルア＝ゾルディック', 'キルア'],
@@ -29,6 +21,14 @@ export const quizData = [
     image: '/images/Quiz/easy/7.jpg',
     level: 'easy',
   },
+  // {
+  //   id: 153,
+  //   question: 'この画像の人物の名前は？(フルネームでも名前のみでも可)',
+  //   correctAnswer: ['ゴン＝フリークス', 'ゴン'],
+  //   category: 'ハンター試験編',
+  //   image: '/images/Quiz/easy/1.jpeg',
+  //   level: 'easy',
+  // },
   {
     id: 4,
     question: 'キルアの家族が住む屋敷のある山の名前は？',

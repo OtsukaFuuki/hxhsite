@@ -85,7 +85,7 @@ const QuizControls: React.FC<QuizControlsProps> = ({
             />
           </div>
 
-          <div className="flex flex-col md:flex-row gap-5 items-center ml-auto md:ml-0 md:mt-8">
+          <div className="flex flex-col md:flex-row gap-5 items-center ml-auto md:ml-0 md:mt-8 ">
             <button
               onClick={() => setIsPopupOpen(true)}
               className="text-white rounded"
