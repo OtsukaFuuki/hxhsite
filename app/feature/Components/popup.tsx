@@ -1,4 +1,5 @@
 // components/Popup.tsx
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 interface PopupProps {
@@ -53,7 +54,7 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
           <div className="max-h-[400px] overflow-y-auto space-y-6 text-sm leading-6">
             <section>
               <h3 className="text-lg font-semibold">画面について</h3>
-              <ul className="list-disc pl-3 space-y-1 mt-2">
+              <ul className="list-disc pl-3 space-y-1 mt-2 text-xs md:text-base">
                 <li style={{ listStyle: 'none' }}>1. スタート画面</li>
                 <li style={{ listStyle: 'none' }}>2. 選択画面</li>
                 <li style={{ listStyle: 'none' }}>3. クイズ画面</li>
@@ -61,59 +62,83 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose }) => {
 
               <h3 className="text-lg font-semibold mt-2">各種機能について</h3>
 
-              <ul className="list-disc pl-7 space-y-1">
-                <li className="mt-2">
-                  タイトルロゴをクリックするとスタート画面へ遷移します。
+              <ul className="space-y-1 text-xs">
+                <li className="mt-2 flex items-center">
+                  <Image
+                    src="/images/header/logo1.png"
+                    alt="HxH ロゴ"
+                    width={40}
+                    height={0}
+                  />
+                  <span>をタップするとスタート画面へ遷移します。</span>
                 </li>
-                <li>
-                  ゴンのアイコンをクリックすると背景がランダムで切り替わります。
+                <li className="flex items-center">
+                  <Image
+                    src="/images/load/4.png"
+                    alt="背景を変更するボタン"
+                    width={40}
+                    height={0}
+                  />
+                  <span>をタップすると背景がランダムで変わります。</span>
                 </li>
-                <li>
-                  キルアのアイコンをクリックするとメニューバーが開きます。
+                <li className="flex items-center">
+                  <Image
+                    src="/images/nav/1.png"
+                    alt="navBarを案内するキルア"
+                    width={40}
+                    height={0}
+                  />
+                  <span>をタップするとメニューバーが開きます。</span>
                 </li>
-                <li>
-                  ヒソカのアイコンをクリックすることでこのポップアップが表示され当アプリの説明を見ることができます。
+                <li className="flex items-center">
+                  <Image
+                    src="/images/header/1.png"
+                    alt="popupヒソカ"
+                    width={40}
+                    height={40}
+                  />
+                  をタップするとアプリの説明を確認できます。
                 </li>
               </ul>
             </section>
             <section>
               <h3 className="text-lg font-semibold">遊び方</h3>
-              <h4 className="font-semibold mt-2 pl-2">1. 背景と音楽の設定</h4>
-              <ul className="list-decimal pl-10 space-y-1">
-                <li>ゴンをクリックし、お好きな背景を選択してください。</li>
+              <h4 className="font-semibold pl-2">1. クイズの設定</h4>
+              <ul className="list-decimal pl-10 space-y-1 mt-1 text-xs sm:text-base">
                 <li>
-                  キルアをクリックし、メニューバーの中で好きな音楽を選択してください。
-                </li>
-              </ul>
-              <h4 className="font-semibold pl-2">2. クイズの設定</h4>
-              <ul className="list-decimal pl-10 space-y-1 mt-1">
-                <li>
-                  出題範囲のドロップダウンリストを押下し、選択することでご自身の漫画やアニメの進捗具合に応じてクイズを楽しむことができます。
+                  <span className="font-semibold">出題範囲</span>
+                  を選択することでご自身の漫画やアニメの進捗具合に応じてクイズを楽しむことができます。
                 </li>
                 <li>
-                  問題数のドロップダウンリストを押下し、選択することで出題される問題数を選択することができます。お好きなものを選択して下さい。
+                  <span className="font-semibold">問題数</span>
+                  を選択することで何問出題するかを設定できます。
                 </li>
                 <li>
-                  シャッフル機能をONにするか否か決めて下さい。ONにすると問題がランダムで出題されます。2回目以降お遊びいただく際にお楽しみいただけます。
+                  <span className="font-semibold">シャッフル機能</span>
+                  をONにするか否か決めて下さい。ONにすると問題がランダムで出題されます。2回目以降お遊びいただく際にお楽しみいただけます。
                 </li>
                 <li>
-                  最後に難易度を選択します。選択した後にクイズがスタートします。
+                  <span className="font-semibold">難易度</span>
+                  を選択します。選択した後にクイズがスタートします。
                 </li>
+                <li>最後に設定した内容の確認メッセージが表示されます。</li>
               </ul>
               <h4 className="font-semibold pl-2 mt-1">3. クイズ画面</h4>
               <ul className="list-decimal pl-10 space-y-1 mt-1">
                 <li>問題が表示されます。答えを入力して下さい。</li>
                 <li>
-                  「回答する」ボタンを押下すると次の問題に進みます。わからない場合は空欄のままボタンを押すことで次の問題に進みます。
+                  「回答する」ボタンを押下すると次の問題に進みます。空欄のままでもボタンは押下できます。
                 </li>
                 <li>
-                  「前へ」ボタンを押下すると前の問題に戻ります。入力した内容が表示されるので修正することができます。
+                  「前へ」ボタンを押下すると前の問題に戻ります。入力した内容が表示されるので修正が可能です。
                 </li>
                 <li>
-                  左上の「TOPへ」ボタンを押下すると選択画面に戻ります。途中でクイズをやめたい場合はこちらを押下してください。※途中でクイズをやめた場合は内容は保存されません。
+                  左上の「TOPへ」ボタンを押下すると選択画面に戻ります。
+                  <br />
+                  ※クイズを中断した場合は内容は保存されません。
                 </li>
                 <li>
-                  難問中現在何問目か把握したい場合は画面右上の数字をご確認下さい。
+                  現在の問題数確認したい場合は画面右上の数字をご確認下さい。
                 </li>
                 <li>
                   全問題が終了すると結果画面が表示されます。「トップに戻る」ボタンを押下すると選択画面に戻ります。
