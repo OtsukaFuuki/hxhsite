@@ -53,7 +53,7 @@ const QuizDialog: React.FC<QuizDialogProps> = ({
           <ul className="space-y-1">
             <li className="ml-2">{selectedCategory}</li>
             <li className="ml-2">{numberOfQuestions}</li>
-            <li className="ml-2">{isShuffle ? '有効' : '無効'}</li>
+            <li className="ml-2">{isShuffle ? 'ON' : 'OFF'}</li>
             <li className="ml-2">{displayedDifficulty}</li>
           </ul>
         </div>
