@@ -8,11 +8,10 @@ type HamburgerMenuProps = {
 const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, onClose }) => {
   return (
     <div
-      className={`fixed z-50 top-0 right-0 h-screen bg-gray-800 text-white transform ${
+      className={`fixed z-50 top-0 right-0 h-screen bg-gray-800 text-white transform w-[85%] sm:w-[30%]  ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       } transition-transform duration-300 ease-in-out`}
       style={{
-        width: '85%',
         backgroundImage: "url('/images/menu/14.jpeg')",
         // backgroundImage: "url('/images/menu/2.jpeg')",
         //個人的に9か11が好き

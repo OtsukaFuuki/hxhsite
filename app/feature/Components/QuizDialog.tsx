@@ -31,7 +31,7 @@ const QuizDialog: React.FC<QuizDialogProps> = ({
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 popup-no-margin">
       <div
-        className="bg-white text-black p-6 rounded-lg shadow-lg w-[90%]"
+        className="bg-white text-black p-6 rounded-lg shadow-lg w-[90%] md:w-[30%]"
         style={{
           backgroundImage: "url('/images/Quiz/bg2.png')",
           backgroundSize: 'cover',
