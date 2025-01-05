@@ -41,7 +41,6 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, onClose }) => {
         </div>
 
         <div className="mt-6">
-          <h2 className="text-lg font-bold mb-4">設定1</h2>
           <p className="font-bold">注意点</p>
           <p className="text-xs mt-1">
             ・画像の表示が遅いので2秒くらい待って！
