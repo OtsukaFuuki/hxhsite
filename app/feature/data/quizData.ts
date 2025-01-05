@@ -39,8 +39,7 @@ export const quizData = [
   },
   {
     id: 5,
-    question:
-      '幻影旅団の団長の名前はなんというか？(フルネームでも名前のみでも可)',
+    question: '幻影旅団の団長の名前はなんというか？',
     correctAnswer: ['クロロ＝ルシルフル', 'クロロ'],
     category: 'ヨークシンシティ編',
     image: '/images/Quiz/easy/4.jpg',
@@ -98,14 +97,14 @@ export const quizData = [
   {
     id: 27,
     question: 'キルアは何系の念の能力者か？',
-    correctAnswer: ['変化系'],
+    correctAnswer: ['変化系', '変化'],
     category: 'ハンター試験編',
     // image: "/images/Quiz/easy/27.jpg", level: "easy",
   },
   {
     id: 29,
     question: '十老頭の自慢の10人で構成されている実行部隊といえば？',
-    correctAnswer: ['陰獣'],
+    correctAnswer: ['陰獣', 'いんじゅう'],
     category: 'ヨークシンシティ編',
     image: '/images/Quiz/easy/29.jpg',
     level: 'easy',
@@ -345,7 +344,7 @@ export const quizData = [
   {
     id: 151,
     question: '水見式で「水の量が増える」のはどの系統か？',
-    correctAnswer: ['放出系'],
+    correctAnswer: ['放出系', '放出'],
     category: '天空闘技場編',
     image: '/images/Quiz/easy/151.jpeg',
     level: 'easy',
@@ -353,28 +352,28 @@ export const quizData = [
   {
     id: 132,
     question: '水見式で「水の味が変化する」のはどの系統か？',
-    correctAnswer: ['強化系'],
+    correctAnswer: ['強化系', '強化'],
     category: '天空闘技場編',
     // image: "/images/Quiz/easy/132.jpeg", level: "easy",
   },
   {
     id: 133,
     question: '水見式で「水の色が変化する」のはどの系統か？',
-    correctAnswer: ['変化系'],
+    correctAnswer: ['変化系', '変化'],
     category: '天空闘技場編',
     // image: "/images/Quiz/easy/133.jpeg", level: "easy",
   },
   {
     id: 134,
     question: '水見式で「水の表面に動きが現れる」のはどの系統か？',
-    correctAnswer: ['操作系'],
+    correctAnswer: ['操作系', '操作'],
     category: '天空闘技場編',
     // image: "/images/Quiz/easy/134.jpeg", level: "easy",
   },
   {
     id: 135,
     question: '水見式で「水の中に何かが現れる」のはどの系統か？',
-    correctAnswer: ['具現化系'],
+    correctAnswer: ['具現化系', '具現化'],
     category: '天空闘技場編',
     // image: "/images/Quiz/easy/135.jpeg", level: "easy",
   },
@@ -400,7 +399,7 @@ export const quizData = [
     id: 116,
     question:
       'ネテロが会長の時ハンター協会副会長だった、一見ホストっぽい爽やかな青年といえば？(フルネーム)',
-    correctAnswer: ['パリストン＝ヒル'],
+    correctAnswer: ['パリストン＝ヒル', 'パリストン'],
     category: '会長選挙編',
     image: '/images/Quiz/easy/116.jpeg',
     level: 'easy',
@@ -428,7 +427,7 @@ export const quizData = [
   {
     id: 113,
     question: 'ネテロがメルエムに対して使った、観音を顕現させる能力といえば？',
-    correctAnswer: ['百式観音(ひゃくしきかんのん)'],
+    correctAnswer: ['百式観音', 'ひゃくしきかんのん'],
     category: 'キメラアント王誕生編',
     image: '/images/Quiz/easy/113.jpeg',
     level: 'easy',
@@ -562,7 +561,7 @@ export const quizData = [
     id: 137,
     question:
       '小柄な体型、黒髪で髪を逆立てたようなスタイルで「乙女ちくね」とフィンクスに言い放ち、ブチギレられた幻影旅団のメンバーは誰か？',
-    correctAnswer: ['フェイタン=ポートオ'],
+    correctAnswer: ['フェイタン=ポートオ', 'フェイタン'],
     category: 'ヨークシンシティ編',
     image: '/images/Quiz/easy/137.jpg',
     level: 'normal',
@@ -588,7 +587,7 @@ export const quizData = [
     id: 140,
     question:
       '「おめーら腐ってもここの住人だろうが!! 最期まで根性見せやがれ!!!」と激アツな台詞を放ったエジプト風な帽子と衣装を身にまとう幻影旅団のメンバーは誰か？',
-    correctAnswer: ['フィンクス＝マグカブ'],
+    correctAnswer: ['フィンクス＝マグカブ', 'フィンクス'],
     category: 'キメラアント王誕生編',
     image: '/images/Quiz/easy/140.jpg',
     level: 'normal',
@@ -810,7 +809,7 @@ export const quizData = [
     id: 97,
     question:
       '不良のような見た目だが情に厚いビーストハンターといえば？(フルネーム)',
-    correctAnswer: ['ナックル＝バイン'],
+    correctAnswer: ['ナックル＝バイン', 'ナックル'],
     category: 'キメラアントNGL編',
     image: '/images/Quiz/easy/97.jpeg',
     level: 'normal',
@@ -820,7 +819,7 @@ export const quizData = [
     id: 98,
     question:
       'ナックルと同様にモラウの弟子であるUMAハンター,操作系能力者といえば？(フルネーム)',
-    correctAnswer: ['シュート＝マクマホン'],
+    correctAnswer: ['シュート＝マクマホン', 'シュート'],
     category: 'キメラアントNGL編',
     image: '/images/Quiz/easy/98.jpg',
     level: 'normal',
@@ -830,7 +829,7 @@ export const quizData = [
     id: 99,
     question:
       'ナックル、シュートの師匠でもある、ネテロが連れて来たキメラ＝アント討伐隊の1人といえば？(フルネーム)',
-    correctAnswer: ['モラウ＝マッカーナーシ'],
+    correctAnswer: ['モラウ＝マッカーナーシ', 'モラウ'],
     category: 'キメラアントNGL編',
     image: '/images/Quiz/easy/99.jpeg',
     level: 'normal',
@@ -879,7 +878,7 @@ export const quizData = [
     id: 110,
     question:
       'ナックルの天上不知唯我独損（ハコワレ）で破産した場合、何日間「絶」状態になり念能力が使えなくなるか？',
-    correctAnswer: ['30日間'],
+    correctAnswer: ['30日間', '30'],
     category: 'キメラアント王誕生編',
     image: '/images/Quiz/easy/110.jpeg',
     level: 'normal',
@@ -909,7 +908,7 @@ export const quizData = [
     id: 120,
     question:
       '十二支んのメンバーでコードネームは辰の最古参の老人といえば？(フルネーム)',
-    correctAnswer: ['ボトバイ=ギガンテ'],
+    correctAnswer: ['ボトバイ=ギガンテ', 'ボトバイ'],
     category: '会長選挙編',
     image: '/images/Quiz/easy/120.jpeg',
     level: 'normal',
@@ -918,7 +917,7 @@ export const quizData = [
   {
     id: 123,
     question: 'イルミのヒソカによる評価は何点か？',
-    correctAnswer: ['95点'],
+    correctAnswer: ['95点', '95'],
     category: '会長選挙編',
     image: '/images/Quiz/easy/123.jpeg',
     level: 'normal',
@@ -938,7 +937,7 @@ export const quizData = [
     id: 126,
     question:
       '豆のような顔をしているハンター協会事務員といえば？(フルネームで)',
-    correctAnswer: ['マーメン＝ビーンズ'],
+    correctAnswer: ['マーメン＝ビーンズ', 'マーメン', 'ビーンズ'],
     category: '会長選挙編',
     image: '/images/Quiz/easy/126.jpg',
     level: 'normal',
@@ -947,7 +946,7 @@ export const quizData = [
   {
     id: 130,
     question: '十二支んのメンバーのピヨンのヒソカによる評価は何点か？',
-    correctAnswer: ['77点'],
+    correctAnswer: ['77点', '77'],
     category: '会長選挙編',
     image: '/images/Quiz/easy/130.jpeg',
     level: 'normal',
@@ -956,7 +955,7 @@ export const quizData = [
   {
     id: 129,
     question: '十二支んのメンバーのカンザイのヒソカによる評価は何点か？',
-    correctAnswer: ['85点'],
+    correctAnswer: ['85点', '85'],
     category: '会長選挙編',
     image: '/images/Quiz/easy/129.jpeg',
     level: 'normal',
@@ -1127,8 +1126,8 @@ export const quizData = [
   },
   {
     id: 58,
-    question: 'シルバの妻、キルアの母といえば(フルネーム)？',
-    correctAnswer: ['キキョウ＝ゾルディック'],
+    question: 'シルバの妻、キルアの母といえば？',
+    correctAnswer: ['キキョウ＝ゾルディック', 'キキョウ'],
     category: 'ククルーマウンテン編',
     image: '/images/Quiz/easy/58.jpg',
     level: 'hard',
