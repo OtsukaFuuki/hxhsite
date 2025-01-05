@@ -6,6 +6,10 @@
   background: linear-gradient(to bottom, #ff4500, #3b0d0c);
 }
 
+.buttonGradation {
+  background: linear-gradient(to right, #2684a7, #8e44ad);
+}
+
 .background-image1 {
   background-image: url('/images/background/sp/sp-1.jpeg');
   background-size: cover; /* 画像を全体にフィットさせる */

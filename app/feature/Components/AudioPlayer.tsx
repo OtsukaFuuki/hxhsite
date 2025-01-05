@@ -8,7 +8,7 @@ export default function AudioPlayerSwitch() {
   const [currentList, setCurrentList] = useState<string[]>([]); // 現在の曲リスト
   const [currentIndex, setCurrentIndex] = useState(0); // 現在の曲のインデックス
   const [currentListName, setCurrentListName] = useState(''); // 現在のリスト名
-  // const [volume, setVolume] = useState(1); // 音量設定（1 = 最大、0 = 最小）
+  const [selectedList, setSelectedList] = useState(''); // 選択されたリスト名
   const [isReady, setIsReady] = useState(false); // 再生準備が整ったかどうか
 
   // 曲リストの定義
@@ -25,6 +25,7 @@ export default function AudioPlayerSwitch() {
     const selectedList = songLists[listKey];
     setCurrentList(selectedList);
     setCurrentListName(listKey); // リスト名を保存
+    setSelectedList(listKey); // 選択されたリスト名を保存
     setCurrentIndex(0); // 最初の曲に設定
 
     if (audioRef.current) {
@@ -60,55 +61,40 @@ export default function AudioPlayerSwitch() {
     }
   };
 
-  // 音量変更
-  // const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   const newVolume = parseFloat(event.target.value);
-  //   if (audioRef.current) {
-  //     audioRef.current.volume = newVolume;
-  //   }
-  //   setVolume(newVolume);
-  // };
-
   return (
     <div className="space-y-4">
       {/* 再生中のリスト名 */}
       <div className="text-left text-sm font-semibold">
         {currentListName
           ? `再生中のリスト: ${currentListName}`
-          : '下記の再生リストを選択して下さい'}
+          : '再生中のリスト: 何も選択されていません'}
       </div>
+
       {/* リスト再生ボタン */}
       <div className="flex flex-col gap-2">
-        <button
-          className="px-5 py-1 bg-blue-500 text-white rounded text-left"
-          onClick={() => playList('list1')}
-        >
-          1(旅団3曲)
-        </button>
-        <button
-          className="px-5 py-1 bg-green-500 text-white rounded text-left"
-          onClick={() => playList('list2')}
-        >
-          2(ヒソカ2曲)
-        </button>
-        <button
-          className="px-5 py-1 bg-red-500 text-white rounded text-left"
-          onClick={() => playList('list3')}
-        >
-          3(エンドレス大地踏み締めて)
-        </button>
-        <button
-          className="px-5 py-1 bg-red-500 text-white rounded text-left"
-          onClick={() => playList('list4')}
-        >
-          4(ネテロvsメルエム)
-        </button>
-        <button
-          className="px-5 py-1 bg-red-500 text-white rounded text-left"
-          onClick={() => playList('list5')}
-        >
-          5(変わり種)4:56
-        </button>
+        {Object.entries(songLists).map(([listKey], index) => (
+          <button
+            key={index}
+            className={`px-5 py-3 rounded text-left text-sm ${
+              selectedList === listKey
+                ? 'buttonGradation text-white' // 選択時のスタイル
+                : 'bg-gray-200 text-gray-600' // 非選択時のスタイル
+            }`}
+            onClick={() => playList(listKey as keyof typeof songLists)}
+          >
+            {`PlayList${index + 1} ${
+              listKey === 'list1'
+                ? '(旅団3曲)'
+                : listKey === 'list2'
+                  ? '(ヒソカ2曲)'
+                  : listKey === 'list3'
+                    ? '(エンドレス大地踏み締めて)'
+                    : listKey === 'list4'
+                      ? '(ネテロvsメルエム)'
+                      : '(変わり種)'
+            }`}
+          </button>
+        ))}
       </div>
 
       {/* 再生・停止ボタン */}
@@ -116,7 +102,7 @@ export default function AudioPlayerSwitch() {
         <button
           className={`px-6 py-2 text-white rounded ${
             isReady
-              ? 'bg-customGreen hover:bg-customGreen-dark'
+              ? 'buttonGradation hover:buttonGradation'
               : 'bg-gray-300 cursor-not-allowed'
           }`}
           onClick={togglePlay}
@@ -125,34 +111,6 @@ export default function AudioPlayerSwitch() {
           {isPlaying ? '停止' : '再生'}
         </button>
       </div>
-
-      {/* 音量調整スライダー */}
-      {/* <div className="flex items-center justify-center gap-2">
-        <label htmlFor="volume" className="text-sm text-white">
-          音量
-        </label>
-        <input
-          id="volume"
-          type="range"
-          min="0"
-          max="1"
-          step="0.01"
-          value={volume}
-          onChange={handleVolumeChange}
-          className={`w-32 ${isReady ? "" : "bg-gray-200 cursor-not-allowed"}`}
-          disabled={!isReady}
-          style={{
-            background: `linear-gradient(to right, #4caf50 ${
-              volume * 100
-            }%, #ddd ${volume * 100}%)`,
-          }}
-        />
-      </div>
-      <p className="text-xs">
-        つまみで調整できないです⤴︎
-        <br />
-        音量ボタンで調整ください
-      </p> */}
 
       {/* オーディオ */}
       <audio
