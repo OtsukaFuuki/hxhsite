@@ -75,7 +75,7 @@ export default function AudioPlayerSwitch() {
         {Object.entries(songLists).map(([listKey], index) => (
           <button
             key={index}
-            className={`px-5 py-3 rounded text-left text-sm ${
+            className={`px-5 py-3 rounded text-left text-xs sm:text-sm ${
               selectedList === listKey
                 ? 'buttonGradation text-white' // 選択時のスタイル
                 : 'bg-gray-200 text-gray-600' // 非選択時のスタイル
