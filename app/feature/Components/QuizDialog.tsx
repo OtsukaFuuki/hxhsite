@@ -36,7 +36,7 @@ const QuizDialog: React.FC<QuizDialogProps> = ({
           backgroundImage: "url('/images/Quiz/bg2.png')",
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'bottom 0% right -44px', // 下方向 20%、右方向 10% に配置
+          backgroundPosition: 'top 140% right -44px', // 下方向 20%、右方向 10% に配置
         }}
       >
         <h2 className="text-base font-bold mb-4">
@@ -57,8 +57,14 @@ const QuizDialog: React.FC<QuizDialogProps> = ({
             <li className="ml-2">{displayedDifficulty}</li>
           </ul>
         </div>
+        <div>
+          <p className="text-xs">
+            <span className="text-xs">※</span>
+            キャラクターの名前を答える際にはフルネームでも名前のみでも正解判定になります。
+          </p>
+        </div>
 
-        <div className="flex justify-end space-x-4">
+        <div className="flex justify-end space-x-4 mt-4">
           <button
             onClick={onClose}
             className="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400"
